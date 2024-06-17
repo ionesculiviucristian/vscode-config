@@ -4,6 +4,7 @@
   "GitLab.gitlab-workflow",
   "mhutchie.git-graph",
   "donjayamanne.githistory",
+  "waderyan.gitblame",
   "streetsidesoftware.code-spell-checker",
   "dotenv.dotenv-vscode",
   "dbaeumer.vscode-eslint",

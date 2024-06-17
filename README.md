@@ -22,6 +22,7 @@ sudo apt install jq
     - [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)
     - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
     - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+    - [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
   - Linter / Formatters
     - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
     - [Dotenv Official +Vault](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode)
