@@ -2,7 +2,10 @@
 
 ```bash
 # Install prerequisites
+# Arch based distros
 sudo pacman -Syu jq
+# Debian based distros
+sudo apt install jq
 
 # Fire it up!
 ./install
@@ -17,7 +20,8 @@ sudo pacman -Syu jq
     - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
   - Git / Gitlab
     - [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)
-    - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+    - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+    - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
   - Linter / Formatters
     - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
     - [Dotenv Official +Vault](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode)
