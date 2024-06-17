@@ -2,19 +2,32 @@
 
 # set -x
 
-_R="\033[0m"
-_G='\033[0;32m'
-_B="\033[0;34m"
+RESET="\033[0m"
+GREEN='\033[0;32m'
+BLUE="\033[0;34m"
 
 BASE_DIR_PATH=~/.config/Code/User
 PROFILES_DIR_PATH="${BASE_DIR_PATH}/profiles"
 STORAGE_FILE_PATH="${BASE_DIR_PATH}/globalStorage/storage.json"
 
+# Base profile from which all others will be extended
 ENHANCED_NAME="Enhanced"
 ENHANCED_LOCATION="-032cba3e"
 
+# Profile names
 NAMES=("Python" "php" "Vue" "Experimental")
+# Folders corresponding to each profile defined above
 LOCATIONS=("-4edf6258" "-e01d32a2" "-fa2f2c62" "-d9b82aed")
+
+success ()
+{
+  echo -e "${GREEN}${1}${RESET}"
+}
+
+info ()
+{
+  echo -e "${BLUE}${1}${RESET}"
+}
 
 profile_exists ()
 {
@@ -25,14 +38,14 @@ create_profile ()
 {
   TEMP_FILE=$(mktemp)
   cp $STORAGE_FILE_PATH $TEMP_FILE
+  # Add or create a new profile entry
   jq --arg location $1 --arg name $2 'if has("userDataProfiles") then .userDataProfiles += [{"location":$location,"name":$name}] else .userDataProfiles = [{"location":$location,"name":$name}] end' $TEMP_FILE > $STORAGE_FILE_PATH
   rm -f -- $TEMP_FILE
 }
 
 install_extensions ()
 {
-  cat $1 | jq -r --arg profile $2 '.[] | "code --profile \($profile) --install-extension \(.) > /dev/null 2>&1"' | while IFS= read -r line; do
-    echo -e "${_B}Installing extension using ${line}${_R}"
+  cat $1 | jq -r --arg profile $2 '.[] | "info \"Installing extension \(.)...\" && code --profile \($profile) --install-extension \(.) > /dev/null 2>&1"' | while IFS= read -r line; do
     eval "$line"
   done
 }
@@ -41,10 +54,12 @@ install_profile ()
 {
   LOCATION="${PROFILES_DIR_PATH}/${1}"
   LOCAL_PROFILE=./profiles/${2,}
-  echo -e "${_G}Installing ${2} profile...${_R}"
+  success "Installing ${2} profile..."
+  # Make sure the globalStorage folder is created as it saves the editor's state
   if ! [ -d "${LOCATION}/globalStorage" ]; then
     mkdir -p "${LOCATION}/globalStorage"
   fi
+  # Merged the enhanced and the curent profile settings
   jq -s ".[0] * .[1]" "./profiles/${ENHANCED_NAME,}/settings.json" "${LOCAL_PROFILE}/settings.json" > "${LOCATION}/settings.json"
   if [ $(profile_exists "${1}") = false ]; then
     create_profile "${1}" "${2}"
