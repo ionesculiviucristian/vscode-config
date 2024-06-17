@@ -30,5 +30,7 @@
   "remotefs.remote": {
     "uploadOnSave": true,
     "ignore": [".vscode", ".git", ".DS_Store"]
-  }
+  },
+  "workbench.startupEditor": "none",
+  "gitlens.showWhatsNewAfterUpgrades": false
 }

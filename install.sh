@@ -49,8 +49,8 @@ install_profile ()
   LOCATION="${PROFILES_DIR_PATH}/${1}"
   LOCAL_PROFILE=./profiles/${2,}
   echo -e "${_G}Installing ${2} profile...${_R}"
-  if ! [ -d $LOCATION ]; then
-    mkdir -p $LOCATION
+  if ! [ -d "${LOCATION}/globalStorage" ]; then
+    mkdir -p "${LOCATION}/globalStorage"
   fi
   jq -s ".[0] * .[1]" "./profiles/${ENHANCED_NAME,}/settings.json" "${LOCAL_PROFILE}/settings.json" > "${LOCATION}/settings.json"
   if [ $(profile_exists "${1}") = false ]; then
