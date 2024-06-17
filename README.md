@@ -41,6 +41,7 @@ sudo pacman -Syu jq
     - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
     - [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp)
     - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+    - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
   - Snippets
     - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
   - Themes
