@@ -2,13 +2,6 @@
 
 # set -x
 
-# d9b82aed
-# e17cc2af
-# 0528f0c8
-# e6e9c864
-# 61e01458
-# 53804979
-
 _R="\033[0m"
 _G='\033[0;32m'
 _B="\033[0;34m"
@@ -20,8 +13,8 @@ STORAGE_FILE_PATH="${BASE_DIR_PATH}/globalStorage/storage.json"
 ENHANCED_NAME="Enhanced"
 ENHANCED_LOCATION="-032cba3e"
 
-NAMES=("Python" "php" "Vue")
-LOCATIONS=("-4edf6258" "-e01d32a2" "-fa2f2c62")
+NAMES=("Python" "php" "Vue" "Experimental")
+LOCATIONS=("-4edf6258" "-e01d32a2" "-fa2f2c62" "-d9b82aed")
 
 profile_exists ()
 {

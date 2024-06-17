@@ -24,7 +24,7 @@
   "editor.formatOnSave": true,
   "editor.linkedEditing": true,
   "git.enableSmartCommit": true,
-  "cSpell.words": ["autoloader"],
+  "cSpell.words": ["autoloader", "laravel", "pacman", "vuetify"],
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
   "remotefs.remote": {

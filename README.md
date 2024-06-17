@@ -60,6 +60,16 @@ sudo pacman -Syu jq
   - [PHP Awesome Snippets](https://marketplace.visualstudio.com/items?itemName=hakcorp.php-awesome-snippets)
   - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
   - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+- Experimental
+  - [Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible)
+  - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
+  - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+  - [Geo Data Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer)
+  - [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
+  - [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
+  - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+  - [Text Power Tools](https://marketplace.visualstudio.com/items?itemName=qcz.text-power-tools)
+  - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml)
 
 ## Testing scenarios
 
