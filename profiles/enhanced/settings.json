@@ -1,0 +1,30 @@
+{
+  "editor.fontSize": 18,
+  "editor.fontFamily": "'JetBrainsMonoNL NFM', 'monospace', monospace",
+  "files.autoSave": "afterDelay",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.insertFinalNewline": true,
+  "editor.codeActionsOnSave": {},
+  "files.associations": {
+    ".env*": "dotenv"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "git.enableSmartCommit": true,
+  "cSpell.words": ["autoloader"],
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false
+}
