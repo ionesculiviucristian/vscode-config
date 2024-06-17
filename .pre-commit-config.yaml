@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+      - id: generate-readme-file
+        name: Generate README.md file
+        entry: node ./scripts/generate-readme.js
+        language: system

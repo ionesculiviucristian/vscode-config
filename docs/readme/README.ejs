@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs', { profiles, slugify }); -%>
+
+## List of available profiles
+<% profiles.forEach(function(profile){ %>
+<%- `### ${profile.name}` -%>
+<% if (profile.settings) { %>
+<%- `${profile.settings}` -%>
+<% } %>
+<% profile.extensions.forEach(function(extension){ %>
+- [<%- extension.name %>](<%- extension.url %>): <%- extension.description -%>
+<% if (extension.settings) { %>
+<%- `${extension.settings}` -%>
+<% } %>
+<% }); -%>
+<% }); -%>
+
+<%- include('partials/footer.ejs'); -%>
