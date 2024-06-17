@@ -17,7 +17,7 @@ ENHANCED_LOCATION="-032cba3e"
 # Profile names
 NAMES=("Python" "php" "Vue" "Experimental")
 # Folders corresponding to each profile defined above
-LOCATIONS=("-4edf6258" "-e01d32a2" "-fa2f2c62" "-d9b82aed")
+LOCATIONS=("4edf6258" "e01d32a2" "fa2f2c62" "d9b82aed")
 
 success ()
 {

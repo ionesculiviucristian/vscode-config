@@ -1,6 +1,4 @@
 [
-  "mongodb.mongodb-vscode",
-  "mtxr.sqltools",
   "ms-vscode-remote.remote-containers",
   "ms-azuretools.vscode-docker",
   "GitLab.gitlab-workflow",

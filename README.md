@@ -12,9 +12,6 @@ sudo pacman -Syu jq
 
 - Extended
 
-  - Databases
-    - [MongoDB for VS Code](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
-    - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)
   - Docker
     - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
     - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
@@ -50,27 +47,31 @@ sudo pacman -Syu jq
     - [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
     - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
-- Python
-  - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
-  - [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
-  - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-  - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
-- php
-  - [Composer](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.composer-php-vscode)
-  - [PHP Awesome Snippets](https://marketplace.visualstudio.com/items?itemName=hakcorp.php-awesome-snippets)
-  - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
-  - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 - Experimental
   - [Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible)
   - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
   - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
   - [Geo Data Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer)
   - [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
+  - [MongoDB for VS Code](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
   - [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
   - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+  - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)
   - [Text Power Tools](https://marketplace.visualstudio.com/items?itemName=qcz.text-power-tools)
   - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml)
+- php
+  - [Composer](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.composer-php-vscode)
+  - [PHP Awesome Snippets](https://marketplace.visualstudio.com/items?itemName=hakcorp.php-awesome-snippets)
+  - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
+  - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+- Python
+  - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+  - [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
+  - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
+- Vue
+  - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
 ## Testing scenarios
 
