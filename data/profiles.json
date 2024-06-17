@@ -1,0 +1,399 @@
+[
+  {
+    "extensions": [
+      {
+        "description": "To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace",
+        "id": "jasonlhy.hungry-delete",
+        "name": "Hungry Delete"
+      },
+      {
+        "description": "Pull Request and Issue Provider for GitHub",
+        "id": "GitHub.vscode-pull-request-github",
+        "name": "GitHub Pull Requests"
+      },
+      {
+        "description": "Official GitLab-maintained extension for Visual Studio Code",
+        "id": "GitLab.gitlab-workflow",
+        "name": "GitLab Workflow"
+      },
+      {
+        "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
+        "id": "aaron-bond.better-comments",
+        "name": "Better Comments"
+      },
+      {
+        "description": "An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set",
+        "id": "ms-vscode-remote.vscode-remote-extensionpack",
+        "name": "Remote Development"
+      },
+      {
+        "description": "Your AI pair programmer",
+        "id": "GitHub.copilot",
+        "name": "GitHub Copilot"
+      },
+      {
+        "description": "AI chat features powered by Copilot",
+        "id": "GitHub.copilot-chat",
+        "name": "GitHub Copilot Chat"
+      },
+      {
+        "description": "Official Stylelint extension for Visual Studio Code",
+        "id": "stylelint.vscode-stylelint",
+        "name": "Stylelint",
+        "settings": {
+          "css.validate": false,
+          "less.validate": false,
+          "scss.validate": false
+        }
+      },
+      {
+        "description": "Show TODO, FIXME, etc. comment tags in a tree view",
+        "id": "Gruntfuggly.todo-tree",
+        "name": "Todo Tree"
+      },
+      {
+        "description": "XML Language Support by Red Hat",
+        "id": "redhat.vscode-xml",
+        "name": "XML"
+      },
+      {
+        "description": "Integrates ShellCheck into VS Code, a linter for Shell scripts",
+        "id": "timonwong.shellcheck",
+        "name": "ShellCheck",
+        "settings": {
+          "shellcheck.ignorePatterns": {
+            "**/*.profile": true,
+            "**/*.env.*": true
+          }
+        }
+      },
+      {
+        "description": "See git blame information in the status bar",
+        "id": "waderyan.gitblame",
+        "name": "Git Blame"
+      },
+      {
+        "description": "View a Git Graph of your repository, and perform Git actions from the graph",
+        "id": "mhutchie.git-graph",
+        "name": "Git Graph"
+      },
+      {
+        "description": "View git log, file history, compare branches or commits",
+        "id": "donjayamanne.githistory",
+        "name": "Git History"
+      },
+      {
+        "description": "Spelling checker for source code",
+        "id": "streetsidesoftware.code-spell-checker",
+        "name": "Code Spell Checker",
+        "settings": {
+          "cSpell.diagnosticLevel": "Hint"
+        }
+      },
+      {
+        "description": "All-in-one solution with 240+ commands for text manipulation: filter lines (grep), remove lines, insert number sequences and GUIDs, sorting, change case, converting numbers, generating fake data and more",
+        "id": "qcz.text-power-tools",
+        "name": "Text Power Tools"
+      },
+      {
+        "description": "Support for dotenv file syntax",
+        "id": "mikestead.dotenv",
+        "name": "DotENV",
+        "settings": {
+          "files.associations": {
+            "*.env.*": "dotenv"
+          }
+        }
+      },
+      {
+        "description": "Integrates ESLint JavaScript into VS Code",
+        "id": "dbaeumer.vscode-eslint",
+        "name": "ESLint",
+        "settings": {
+          "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+          }
+        }
+      },
+      {
+        "description": "Fully-featured TOML support",
+        "id": "tamasfe.even-better-toml",
+        "name": "Even Better TOML"
+      },
+      {
+        "description": "Markdown linting and style checking for Visual Studio Code",
+        "id": "DavidAnson.vscode-markdownlint",
+        "name": "markdownlint"
+      },
+      {
+        "description": "Code formatter using prettier",
+        "id": "esbenp.prettier-vscode",
+        "name": "Prettier - Code formatter",
+        "settings": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      },
+      {
+        "description": "Sorts the keys within JSON objects",
+        "id": "richie5um2.vscode-sort-json",
+        "name": "Sort JSON objects"
+      },
+      {
+        "description": "Sorts lines of text",
+        "id": "Tyriar.sort-lines",
+        "name": "Sort lines"
+      },
+      {
+        "description": "YAML Sort extends VS Code to sort, format and validate YAML files",
+        "id": "PascalReitermann93.vscode-yaml-sort",
+        "name": "YAML Sort",
+        "settings": {
+          "vscode-yaml-sort.forceQuotes": true,
+          "vscode-yaml-sort.quotingType": "\"",
+          "vscode-yaml-sort.sortArrays": true
+        }
+      },
+      {
+        "description": "Improve highlighting of errors, warnings and other language diagnostics",
+        "id": "usernamehw.errorlens",
+        "name": "Error Lens",
+        "settings": {
+          "errorLens.excludeBySource": ["cSpell"]
+        }
+      },
+      {
+        "description": "All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)",
+        "id": "yzhang.markdown-all-in-one",
+        "name": "Markdown All in One"
+      },
+      {
+        "description": "Visual Studio Code plugin that autocompletes filenames",
+        "id": "christian-kohler.path-intellisense",
+        "name": "Path Intellisense",
+        "settings": {
+          "javascript.suggest.paths": false,
+          "typescript.suggest.paths": false
+        }
+      },
+      {
+        "description": "Make TypeScript errors prettier and more human-readable in VSCode",
+        "id": "yoavbls.pretty-ts-errors",
+        "name": "Pretty TypeScript Errors"
+      },
+      {
+        "description": "SFTP/FTP sync",
+        "id": "Natizyskunk.sftp",
+        "name": "SFTP"
+      },
+      {
+        "description": "YAML Language Support by Red Hat, with built-in Kubernetes syntax support",
+        "id": "redhat.vscode-yaml",
+        "name": "YAML",
+        "settings": {
+          "redhat.telemetry.enabled": false
+        }
+      },
+      {
+        "description": "Code snippets for JavaScript in ES6 syntax",
+        "id": "xabikos.JavaScriptSnippets",
+        "name": "JavaScript (ES6) code snippets"
+      },
+      {
+        "description": "Soothing pastel theme for VSCode",
+        "id": "Catppuccin.catppuccin-vsc",
+        "name": "Catppuccin for VSCode",
+        "settings": {
+          "editor.semanticHighlighting.enabled": true,
+          "gopls": {
+            "ui.semanticTokens": true
+          },
+          "terminal.integrated.minimumContrastRatio": 1,
+          "window.titleBarStyle": "custom",
+          "workbench.colorTheme": "Catppuccin Mocha"
+        }
+      },
+      {
+        "description": "Soothing pastel icon theme for VSCode",
+        "id": "Catppuccin.catppuccin-vsc-icons",
+        "name": "Catppuccin Icons for VSCode",
+        "settings": {
+          "workbench.iconTheme": "catppuccin-mocha"
+        }
+      },
+      {
+        "description": "Display import/require package size in the editor",
+        "id": "wix.vscode-import-cost",
+        "name": "Import Cost"
+      },
+      {
+        "description": "AI-assisted development",
+        "id": "VisualStudioExptTeam.vscodeintellicode",
+        "name": "IntelliCode"
+      },
+      {
+        "description": "Boost your productivity with advanced JavaScript/TypeScript refactorings and commands",
+        "id": "sburg.vscode-javascript-booster",
+        "name": "JavaScript Booster"
+      },
+      {
+        "description": "Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins",
+        "id": "nhoizey.gremlins",
+        "name": "Gremlins tracker for Visual Studio Code"
+      }
+    ],
+    "id": "enhanced",
+    "name": "Enhanced",
+    "primary": true,
+    "settings": {
+      "editor.codeActionsOnSave": {
+        "source.addMissingImports": "explicit"
+      },
+      "editor.fontFamily": "'JetBrainsMonoNL Nerd Font Mono', 'monospace', monospace",
+      "editor.fontSize": 18,
+      "editor.formatOnPaste": true,
+      "editor.formatOnSave": true,
+      "editor.linkedEditing": true,
+      "editor.stickyScroll.enabled": false,
+      "files.autoSave": "afterDelay",
+      "files.insertFinalNewline": true,
+      "git.enableSmartCommit": true,
+      "git.openRepositoryInParentFolders": "always",
+      "javascript.preferences.importModuleSpecifier": "non-relative",
+      "typescript.preferences.importModuleSpecifier": "non-relative",
+      "workbench.startupEditor": "none"
+    }
+  },
+  {
+    "extensions": [
+      {
+        "description": "All-in-One composer integration, quick actions, commands, automatic installation, tasks, code lenses, diagnostics, and composer.json IntelliSense",
+        "id": "DEVSENSE.composer-php-vscode",
+        "name": "Composer"
+      },
+      {
+        "description": "Debug support for PHP with Xdebug",
+        "id": "xdebug.php-debug",
+        "name": "PHP Debug"
+      },
+      {
+        "description": "A fullset of snippets for PHP devs to boost coding productivity",
+        "id": "hakcorp.php-awesome-snippets",
+        "name": "PHP Awesome Snippets"
+      },
+      {
+        "description": "PHP code intelligence for Visual Studio Code",
+        "id": "bmewburn.vscode-intelephense-client",
+        "name": "PHP Intelephense"
+      }
+    ],
+    "id": "php",
+    "name": "PHP",
+    "settings": {
+      "[php]": {
+        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+      }
+    }
+  },
+  {
+    "extends": ["php", "vue"],
+    "extensions": [
+      {
+        "description": "Intelligent Tailwind CSS tooling for VS Code",
+        "id": "bradlc.vscode-tailwindcss",
+        "name": "Tailwind CSS IntelliSense"
+      },
+      {
+        "description": "Official VS Code extension for Laravel",
+        "id": "laravel.vscode-laravel",
+        "name": "Laravel"
+      }
+    ],
+    "id": "laravel-vue",
+    "name": "Laravel with Vue"
+  },
+  {
+    "extensions": [
+      {
+        "description": "Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates",
+        "id": "samuelcolvin.jinjahtml",
+        "name": "Better Jinja"
+      },
+      {
+        "description": "Formatting support for Python files using the Black formatter",
+        "id": "ms-python.black-formatter",
+        "name": "Black Formatter",
+        "settings": {
+          "black-formatter.args": ["--line-length", "120"]
+        }
+      },
+      {
+        "description": "A performant, feature-rich language server for Python in VS Code",
+        "id": "ms-python.vscode-pylance",
+        "name": "Pylance"
+      },
+      {
+        "description": "Linting support for Python files using Flake8",
+        "id": "ms-python.flake8",
+        "name": "Flake8",
+        "settings": {
+          "flake8.args": ["--max-line-length=120"]
+        }
+      },
+      {
+        "description": "Import organization support for Python files using isort",
+        "id": "ms-python.isort",
+        "name": "isort",
+        "settings": {
+          "isort.args": ["--profile", "black"]
+        }
+      },
+      {
+        "description": "Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more",
+        "id": "ms-python.python",
+        "name": "Python"
+      }
+    ],
+    "id": "python",
+    "name": "Python",
+    "settings": {
+      "[python]": {
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "always"
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter"
+      },
+      "python.analysis.autoImportCompletions": true,
+      "python.analysis.typeCheckingMode": "strict",
+      "python.terminal.activateEnvironment": false
+    }
+  },
+  {
+    "extensions": [
+      {
+        "description": "Language Support for Vue",
+        "id": "Vue.volar",
+        "name": "Vue - Official"
+      }
+    ],
+    "id": "vue",
+    "name": "Vue",
+    "settings": {
+      "[vue]": {
+        "editor.codeActionsOnSave": {
+          "source.addMissingImports": "never"
+        }
+      }
+    }
+  },
+  {
+    "extensions": [
+      {
+        "description": "Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier",
+        "id": "dsznajder.es7-react-js-snippets",
+        "name": "ES7+ React/Redux/React-Native snippets"
+      }
+    ],
+    "id": "react",
+    "name": "React"
+  }
+]

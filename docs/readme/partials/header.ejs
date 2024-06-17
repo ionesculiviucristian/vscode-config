@@ -1,0 +1,31 @@
+# VS Code config
+
+![Preview 1](./assets/preview.png)
+
+## Table of Contents
+
+- [About this project](#about-this-project)
+- [Installation](#installation)
+- [List of available profiles](#list-of-available-profiles)
+<% profiles.forEach(function(profile){ -%>
+<%- `  - [${profile.name}](#${slugify(profile.name)})` %>
+<% }); -%>
+- [Developing](#developing)
+
+## About this project
+
+This project provides a structured and customizable Visual Studio Code environment tailored for modern development workflows. It offers a range of pre-configured profiles for popular tech stacks like Laravel with Vue, Python, React, and more—each designed to enhance productivity, enforce consistency, and support best practices.
+
+The configuration includes essential editor settings, themes, and an extensive collection of curated extensions to streamline coding, debugging, linting, formatting, and version control. Developers can easily install or uninstall profiles using a command-line tool, allowing for seamless setup across different projects or teams.
+
+Whether you're working with PHP, JavaScript, Python, or modern front-end frameworks, this setup helps you stay focused with a clean interface, useful automation, and optimized tooling.
+
+## Installation
+
+```bash
+# Install profiles
+python manage_profiles.py --install
+
+# Uninstall profiles
+python manage_profiles.py --uninstall
+```

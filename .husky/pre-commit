@@ -1,0 +1,5 @@
+# shellcheck disable=SC2148
+
+# Generate README.md file
+node "./scripts/generate-readme.js" && \
+  git add "README.md"
