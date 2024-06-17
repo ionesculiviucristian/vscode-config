@@ -1,13 +1,17 @@
 {
-  "editor.fontSize": 18,
-  "editor.fontFamily": "'JetBrainsMonoNL NFM', 'monospace', monospace",
-  "files.autoSave": "afterDelay",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "files.insertFinalNewline": true,
-  "editor.codeActionsOnSave": {},
-  "files.associations": {
-    ".env*": "dotenv"
+  "workbench.startupEditor": "none",
+  "editor.fontSize": 18,
+  "editor.fontFamily": "'JetBrainsMonoNL NFM', 'monospace', monospace",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -19,18 +23,24 @@
       }
     ]
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.linkedEditing": true,
-  "git.enableSmartCommit": true,
-  "cSpell.words": ["autoloader", "laravel", "pacman", "vuetify"],
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "files.associations": {
+    ".env*": "dotenv"
+  },
+  // Typescript
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.suggest.paths": false,
+  // Javascript
+  "javascript.preferences.importModuleSpecifier": "non-relative",
   "javascript.suggest.paths": false,
+  // Git
+  "git.enableSmartCommit": true,
+  // Code Spell Checker extension
+  "cSpell.words": ["autoloader", "laravel", "pacman", "vuetify"],
+  // SFTP extension
   "remotefs.remote": {
     "uploadOnSave": true,
     "ignore": [".vscode", ".git", ".DS_Store"]
-  },
-  "workbench.startupEditor": "none",
-  "gitlens.showWhatsNewAfterUpgrades": false
+  }
 }

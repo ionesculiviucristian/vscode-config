@@ -40,6 +40,7 @@ sudo pacman -Syu jq
     - [NPM](https://marketplace.visualstudio.com/items?itemName=idered.npm)
     - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
     - [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+    - [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
     - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
     - [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp)
     - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
@@ -73,7 +74,7 @@ sudo pacman -Syu jq
 
 ## Testing scenarios
 
-#### HTML/CSS/JavaScript/TypeScript/Vue (Vuetify)
+### HTML/CSS/JavaScript/TypeScript/Vue (Vuetify)
 
 ```bash
 # Install Vuetify prerequisites
@@ -93,7 +94,7 @@ cd ~/Projects/vuetify-app
 npm run dev
 ```
 
-#### Python (Django)
+### Python (Django)
 
 ```bash
 # Install Django prerequisites
@@ -115,7 +116,7 @@ cd ~/Projects/django_app
 poetry run python manage.py runserver
 ```
 
-#### php (Laravel)
+### php (Laravel)
 
 ```bash
 # Install Laravel prerequisites

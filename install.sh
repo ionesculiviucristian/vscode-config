@@ -3,7 +3,7 @@
 # set -x
 
 RESET="\033[0m"
-GREEN='\033[0;32m'
+GREEN="\033[0;32m"
 BLUE="\033[0;34m"
 
 BASE_DIR_PATH=~/.config/Code/User
@@ -29,55 +29,65 @@ info ()
   echo -e "${BLUE}${1}${RESET}"
 }
 
+strip_comments ()
+{
+	cat "${1}" | sed 's/^ *\/\/.*//'
+}
+
 profile_exists ()
 {
-  cat $STORAGE_FILE_PATH | jq --arg location $1 'if has("userDataProfiles") then .userDataProfiles | map(select(.location == $location)) | length > 0 else false end'
+  cat "${STORAGE_FILE_PATH}" | jq --arg location "${1}" 'if has("userDataProfiles") then .userDataProfiles | map(select(.location == $location)) | length > 0 else false end'
 }
 
 create_profile ()
 {
   TEMP_FILE=$(mktemp)
-  cp $STORAGE_FILE_PATH $TEMP_FILE
+  cp "${STORAGE_FILE_PATH}" "${TEMP_FILE}"
   # Add or create a new profile entry
-  jq --arg location $1 --arg name $2 'if has("userDataProfiles") then .userDataProfiles += [{"location":$location,"name":$name}] else .userDataProfiles = [{"location":$location,"name":$name}] end' $TEMP_FILE > $STORAGE_FILE_PATH
-  rm -f -- $TEMP_FILE
+  jq --arg location "${1}" --arg name "${2}" 'if has("userDataProfiles") then .userDataProfiles += [{"location":$location,"name":$name}] else .userDataProfiles = [{"location":$location,"name":$name}] end' "${TEMP_FILE}" > "${STORAGE_FILE_PATH}"
+  rm -f "${TEMP_FILE}"
 }
 
-install_extensions ()
+install_profile_settings ()
 {
-  cat $1 | jq -r --arg profile $2 '.[] | "info \"Installing extension \(.)...\" && code --profile \($profile) --install-extension \(.) > /dev/null 2>&1"' | while IFS= read -r line; do
-    eval "$line"
+  # Merged the enhanced and the specified profile settings
+  jq -s ".[0] * .[1]" <(strip_comments "./profiles/${ENHANCED_NAME,}/settings.json") <(strip_comments "${1}") > "${2}"
+}
+
+install_profile_extensions ()
+{
+  cat "${1}" | jq -r --arg profile "${2}" '.[] | "info \"Installing extension \(.)...\" && code --profile \($profile) --install-extension \(.) > /dev/null 2>&1"' | while IFS= read -r line; do
+    eval "${line}"
   done
 }
 
 install_profile () 
 {
   LOCATION="${PROFILES_DIR_PATH}/${1}"
-  LOCAL_PROFILE=./profiles/${2,}
+  LOCAL_PROFILE="./profiles/${2,}"
   success "Installing ${2} profile..."
   # Make sure the globalStorage folder is created as it saves the editor's state
   if ! [ -d "${LOCATION}/globalStorage" ]; then
     mkdir -p "${LOCATION}/globalStorage"
   fi
-  # Merged the enhanced and the curent profile settings
-  jq -s ".[0] * .[1]" "./profiles/${ENHANCED_NAME,}/settings.json" "${LOCAL_PROFILE}/settings.json" > "${LOCATION}/settings.json"
   if [ $(profile_exists "${1}") = false ]; then
     create_profile "${1}" "${2}"
   fi
-  install_extensions "${LOCAL_PROFILE}/extensions.json" ${2}
+  install_profile_settings "${LOCAL_PROFILE}/settings.json" "${LOCATION}/settings.json"
+  install_profile_extensions "${LOCAL_PROFILE}/extensions.json" "${2}"
 }
 
 install_enhanced_profile ()
 {
-  install_profile ${ENHANCED_LOCATION} ${ENHANCED_NAME}
+  install_profile "${ENHANCED_LOCATION}" "${ENHANCED_NAME}"
 }
 
 install_profiles ()
 {
   install_enhanced_profile
   for ((i = 0; i < ${#LOCATIONS[@]}; i++)); do
-    install_profile ${LOCATIONS[i]} ${NAMES[i]}
-    install_extensions "./profiles/${ENHANCED_NAME,}/extensions.json" ${NAMES[i]}
+    install_profile "${LOCATIONS[i]}" "${NAMES[i]}"
+    install_profile_extensions "./profiles/${ENHANCED_NAME,}/extensions.json" "${NAMES[i]}"
   done
 }
 
