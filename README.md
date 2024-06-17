@@ -11,43 +11,55 @@ sudo pacman -Syu jq
 ## Profiles
 
 - Extended
-  - "github.github-vscode-theme"
-  - "esbenp.prettier-vscode"
-  - "pkief.material-icon-theme"
-  - "ms-azuretools.vscode-docker"
-  - "dotenv.dotenv-vscode"
-  - "idered.npm"
-  - "dbaeumer.vscode-eslint"
-  - "ruakr.ftp-kr"
-  - "editorconfig.editorconfig"
-  - "wix.vscode-import-cost"
-  - "tamasfe.even-better-toml"
-  - "ritwickdey.LiveServer"
-  - "VisualStudioExptTeam.vscodeintellicode"
-  - "MS-vsliveshare.vsliveshare"
-  - "streetsidesoftware.code-spell-checker"
-  - "alefragnani.project-manager"
-  - "GitLab.gitlab-workflow"
-  - "alefragnani.Bookmarks"
-  - "xabikos.JavaScriptSnippets"
-  - "yzhang.markdown-all-in-one"
-  - "mongodb.mongodb-vscode
-  - "jebbs.plantuml"
-  - "hediet.vscode-drawio"
-  - "humao.rest-client"
-  - "christian-kohler.path-intellisense"
-  - "eamodio.gitlens"
+
+  - Databases
+    - [MongoDB for VS Code](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
+    - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)
+  - Docker
+    - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+    - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+  - Git / Gitlab
+    - [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)
+    - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+  - Linter / Formatters
+    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+    - [Dotenv Official +Vault](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode)
+    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+    - [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
+    - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+    - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - Others
+    - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+    - [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+    - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+    - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+    - [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+    - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+    - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+    - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+    - [NPM](https://marketplace.visualstudio.com/items?itemName=idered.npm)
+    - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+    - [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+    - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
+    - [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp)
+    - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+  - Snippets
+    - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+  - Themes
+    - [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
+    - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
 - Python
-  - "ms-python.python"
-  - "ms-python.vscode-pylance"
-  - "ms-python.flake8"
-  - "ms-python.black-formatter"
-  - "ms-python.isort"
+  - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+  - [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
+  - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
 - php
-  - "xdebug.php-debug"
-  - "bmewburn.vscode-intelephense-client"
-  - "DEVSENSE.composer-php-vscode"
-  - "hakcorp.php-awesome-snippets"
+  - [Composer](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.composer-php-vscode)
+  - [PHP Awesome Snippets](https://marketplace.visualstudio.com/items?itemName=hakcorp.php-awesome-snippets)
+  - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
+  - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 
 ## Testing scenarios
 

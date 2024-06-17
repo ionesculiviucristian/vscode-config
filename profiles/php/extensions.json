@@ -1,6 +1,6 @@
 [
-  "xdebug.php-debug",
-  "bmewburn.vscode-intelephense-client",
   "DEVSENSE.composer-php-vscode",
-  "hakcorp.php-awesome-snippets"
+  "hakcorp.php-awesome-snippets",
+  "xdebug.php-debug",
+  "bmewburn.vscode-intelephense-client"
 ]

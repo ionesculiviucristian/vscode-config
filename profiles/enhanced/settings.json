@@ -26,5 +26,9 @@
   "git.enableSmartCommit": true,
   "cSpell.words": ["autoloader"],
   "typescript.suggest.paths": false,
-  "javascript.suggest.paths": false
+  "javascript.suggest.paths": false,
+  "remotefs.remote": {
+    "uploadOnSave": true,
+    "ignore": [".vscode", ".git", ".DS_Store"]
+  }
 }
