@@ -7,6 +7,12 @@ sudo pacman -Syu jq
 # Debian based distros
 sudo apt install jq
 
+# Add Ollama LLMs
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull starcoder2:3b
+ollama pull llama3:8b
+cp ./configs/continue.json ~/.continue/config.json
+
 # Fire it up!
 ./install
 ```
@@ -47,6 +53,7 @@ sudo apt install jq
     - [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp)
     - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
     - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+    - [Continue - Codestral, GPT-4o, and more](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
   - Snippets
     - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
   - Themes
