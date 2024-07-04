@@ -2,9 +2,6 @@
 
 ```bash
 # Install prerequisites
-# Arch based distros
-sudo pacman -Syu jq
-# Debian based distros
 sudo apt install jq
 
 # Add Ollama LLMs
@@ -83,6 +80,7 @@ cp ./configs/continue.json ~/.continue/config.json
   - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
+  - [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml)
 - Vue
   - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 

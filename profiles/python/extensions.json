@@ -3,5 +3,6 @@
   "ms-python.flake8",
   "ms-python.vscode-pylance",
   "ms-python.python",
-  "ms-python.isort"
+  "ms-python.isort",
+  "samuelcolvin.jinjahtml"
 ]
