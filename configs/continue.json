@@ -9,8 +9,8 @@
     }
   ],
   "tabAutocompleteModel": {
-    "title": "Starcoder 3b",
+    "title": "DeepSeek Coder",
     "provider": "ollama",
-    "model": "starcoder2:3b"
+    "model": "deepseek-coder:6.7b-instruct-q8_0"
   }
 }

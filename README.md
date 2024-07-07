@@ -6,8 +6,8 @@ sudo apt install jq
 
 # Add Ollama LLMs
 curl -fsSL https://ollama.com/install.sh | sh
-ollama pull starcoder2:3b
-ollama pull llama3:8b
+ollama pull deepseek-coder:6.7b-instruct-q8_0
+ollama pull llama3:8b-instruct-q8_0
 cp ./configs/continue.json ~/.continue/config.json
 
 # Fire it up!
