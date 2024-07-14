@@ -35,6 +35,8 @@
   // Javascript
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "javascript.suggest.paths": false,
+  // YAML extension
+  "redhat.telemetry.enabled": false,
   // Typescript
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.suggest.paths": false,
