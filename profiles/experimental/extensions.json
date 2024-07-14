@@ -1,13 +1,16 @@
 [
-  "redhat.ansible",
-  "adpyke.codesnap",
-  "usernamehw.errorlens",
-  "RandomFractalsInc.geo-data-viewer",
-  "sumneko.lua",
-  "mongodb.mongodb-vscode",
   "42Crunch.vscode-openapi",
+  "RandomFractalsInc.geo-data-viewer",
+  "adpyke.codesnap",
+  "jasonlhy.hungry-delete",
+  "lacroixdavid1.vscode-format-context-menu",
+  "metaseed.metago",
+  "mongodb.mongodb-vscode",
   "ms-vscode-remote.vscode-remote-extensionpack",
   "mtxr.sqltools",
   "qcz.text-power-tools",
-  "redhat.vscode-xml"
+  "redhat.ansible",
+  "redhat.vscode-xml",
+  "sumneko.lua",
+  "usernamehw.errorlens"
 ]

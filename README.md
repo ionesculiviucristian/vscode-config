@@ -22,35 +22,46 @@ cp ./configs/continue.json ~/.continue/config.json
     - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
     - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
   - Git / Gitlab
-    - [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)
+    - [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
     - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
     - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-    - [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
-  - Linter / Formatters
+    - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+    - [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)
+  - Linters / Formatters / Sorters
+
     - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
     - [Dotenv Official +Vault](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode)
     - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
     - [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
-    - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
     - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+    - [Sort JSON objects](https://marketplace.visualstudio.com/items?itemName=richie5um2.vscode-sort-json)
+    - [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
+    - [YAML Sort](https://marketplace.visualstudio.com/items?itemName=PascalReitermann93.vscode-yaml-sort)
+    - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+
   - Others
     - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+    - [Continue - Codestral, GPT-4o, and more](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
     - [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
     - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+    - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+    - [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins)
     - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
     - [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+    - [JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
     - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
     - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
     - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
     - [NPM](https://marketplace.visualstudio.com/items?itemName=idered.npm)
     - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+    - [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
     - [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
     - [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
     - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
     - [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp)
     - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
     - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-    - [Continue - Codestral, GPT-4o, and more](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
+    - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
   - Snippets
     - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
   - Themes
@@ -60,9 +71,11 @@ cp ./configs/continue.json ~/.continue/config.json
 - Experimental
   - [Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible)
   - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
-  - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+  - [Format in context menus](https://marketplace.visualstudio.com/items?itemName=lacroixdavid1.vscode-format-context-menu)
   - [Geo Data Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer)
+  - [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete)
   - [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
+  - [MetaGo](https://marketplace.visualstudio.com/items?itemName=metaseed.metago)
   - [MongoDB for VS Code](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
   - [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
   - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
@@ -75,12 +88,12 @@ cp ./configs/continue.json ~/.continue/config.json
   - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
   - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 - Python
+  - [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml)
   - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
   - [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
   - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
-  - [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml)
 - Vue
   - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 

@@ -1,16 +1,16 @@
 {
-  "workbench.colorTheme": "GitHub Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "none",
+  // Code Spell Checker extension
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.words": ["autoloader", "laravel", "pacman", "vuetify"],
   "editor.codeActionsOnSave": {
     "source.addMissingImports": "explicit",
     "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'JetBrainsMonoNL NFM', 'monospace', monospace",
+  "editor.fontSize": 18,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.fontSize": 18,
-  "editor.fontFamily": "'JetBrainsMonoNL NFM', 'monospace', monospace",
   "editor.linkedEditing": true,
   "editor.stickyScroll.enabled": false,
   "editor.tokenColorCustomizations": {
@@ -23,21 +23,25 @@
       }
     ]
   },
-  "files.autoSave": "afterDelay",
+  "errorLens.excludeBySource": ["cSpell"],
   "files.associations": {
     ".env*": "dotenv"
   },
+  "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
-  // Typescript
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.suggest.paths": false,
-  // Javascript
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "javascript.suggest.paths": false,
   // Git
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "always",
-  // Code Spell Checker extension
-  "cSpell.diagnosticLevel": "Hint",
-  "cSpell.words": ["autoloader", "laravel", "pacman", "vuetify"]
+  // Javascript
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.suggest.paths": false,
+  // Typescript
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.suggest.paths": false,
+  // YAML Sort extension
+  "vscode-yaml-sort.forceQuotes": true,
+  "vscode-yaml-sort.quotingType": "\"",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none"
 }
