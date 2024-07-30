@@ -11,7 +11,11 @@ ollama pull llama3:8b-instruct-q8_0
 cp ./configs/continue.json ~/.continue/config.json
 
 # Fire it up!
-./install
+./setup.sh install_profiles
+
+# Revert to the original editor state
+# Keep in mind that this will uninstall ALL profiles!
+./setup.sh uninstall_profiles
 ```
 
 ## Profiles
