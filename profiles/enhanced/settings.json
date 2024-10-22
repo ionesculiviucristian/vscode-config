@@ -43,6 +43,7 @@
   // YAML Sort extension
   "vscode-yaml-sort.forceQuotes": true,
   "vscode-yaml-sort.quotingType": "\"",
+  "vscode-yaml-sort.sortArrays": true,
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none"
