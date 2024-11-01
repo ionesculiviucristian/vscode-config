@@ -1,7 +1,6 @@
 {
   // Code Spell Checker extension
   "cSpell.diagnosticLevel": "Hint",
-  "cSpell.words": ["autoloader", "laravel", "pacman", "vuetify"],
   "editor.codeActionsOnSave": {
     "source.addMissingImports": "explicit",
     "source.fixAll.eslint": "explicit"
@@ -23,6 +22,7 @@
       }
     ]
   },
+  // Error Lens extension
   "errorLens.excludeBySource": ["cSpell"],
   "files.associations": {
     ".env*": "dotenv"

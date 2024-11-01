@@ -1,16 +1,16 @@
 {
   "models": [
     {
-      "model": "AUTODETECT",
-      "title": "Ollama",
-      "completionOptions": {},
       "apiBase": "http://localhost:11434",
-      "provider": "ollama"
+      "completionOptions": {},
+      "model": "AUTODETECT",
+      "provider": "ollama",
+      "title": "Ollama"
     }
   ],
   "tabAutocompleteModel": {
-    "title": "DeepSeek Coder",
+    "model": "deepseek-coder:6.7b-instruct-q8_0",
     "provider": "ollama",
-    "model": "deepseek-coder:6.7b-instruct-q8_0"
+    "title": "DeepSeek Coder"
   }
 }
