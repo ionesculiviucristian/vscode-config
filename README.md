@@ -42,7 +42,6 @@ cp ./configs/continue.json ~/.continue/config.json
     - [YAML Sort](https://marketplace.visualstudio.com/items?itemName=PascalReitermann93.vscode-yaml-sort)
 
   - Others
-    - [Continue - Codestral, GPT-4o, and more](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
     - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
     - [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins)
     - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
@@ -64,6 +63,7 @@ cp ./configs/continue.json ~/.continue/config.json
   - [Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible)
   - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
   - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
+  - [Continue - Codestral, GPT-4o, and more](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
   - [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
   - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
   - [Format in context menus](https://marketplace.visualstudio.com/items?itemName=lacroixdavid1.vscode-format-context-menu)

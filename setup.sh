@@ -6,7 +6,17 @@ RESET="\033[0m"
 GREEN="\033[0;32m"
 BLUE="\033[0;34m"
 
-BASE_DIR_PATH=~/.config/Code/User
+if [ -d "${HOME}/.config/Code - OSS" ]; then
+  BASE_DIR_PATH="${HOME}/.config/Code - OSS/User"
+elif [ -d "${HOME}/.config/Code" ]; then
+  BASE_DIR_PATH="${HOME}/.config/Code/User"
+fi
+
+if [ -z "${BASE_DIR_PATH}" ]; then
+  echo "Code is not installed"
+  exit 1
+fi
+
 PROFILES_DIR_PATH="${BASE_DIR_PATH}/profiles"
 STORAGE_FILE_PATH="${BASE_DIR_PATH}/globalStorage/storage.json"
 
