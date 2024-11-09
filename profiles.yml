@@ -1,0 +1,191 @@
+---
+profiles:
+  enhanced:
+    extensions:
+      - enabled: true
+        github: "https://github.com/ChristianKohler/PathIntellisense"
+        id: "christian-kohler.path-intellisense"
+        name: "Path Intellisense"
+        settings:
+          javascript:
+            suggest:
+              paths: false
+          typescript:
+            suggest:
+              paths: false
+        url: "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense"
+      - enabled: false
+        id: "streetsidesoftware.code-spell-checker-romanian"
+        github: "https://github.com/streetsidesoftware/vscode-cspell-dict-extensions"
+        name: "Romanian - Code Spell Checker"
+        settings:
+          cSpell:
+            language: "en,ro-ro"
+        url: "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-romanian"
+      - enabled: true
+        id: "DavidAnson.vscode-markdownlint"
+        github: "https://github.com/DavidAnson/vscode-markdownlint"
+        name: "markdownlint"
+        settings:
+          editor:
+            codeActionsOnSave:
+              source:
+                fixAll:
+                  markdownlint: true
+            "[markdown]":
+              editor:
+                formatOnSave: true
+                formatOnPaste: true
+        url: "https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint"
+      - enabled: true
+        github: "https://github.com/Microsoft/vscode-eslint"
+        id: "dbaeumer.vscode-eslint"
+        name: "ESLint"
+        url: "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+      - enabled: true
+        github: "https://github.com/DonJayamanne/gitHistoryVSCode"
+        id: "donjayamanne.githistory"
+        name: "Git History"
+        url: "https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory"
+      - enabled: true
+        github: "https://github.com/dotenv-org/dotenv-vscode"
+        id: "dotenv.dotenv-vscode"
+        name: "Dotenv Official +Vault"
+        url: "https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode"
+      - enabled: true
+        github: "https://github.com/prettier/prettier-vscode"
+        id: "esbenp.prettier-vscode"
+        name: "Prettier - Code formatter"
+        url: "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+      - enabled: true
+        github: "https://github.com/primer/github-vscode-theme"
+        id: "GitHub.github-vscode-theme"
+        name: "GitHub Theme"
+        url: "https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme"
+      - enabled: true
+        github: "https://github.com/Idered/iridium"
+        id: "idered.npm"
+        name: "NPM"
+        url: "https://marketplace.visualstudio.com/items?itemName=idered.npm"
+      - enabled: false
+        github: "https://github.com/microsoft/vscode-docker"
+        id: "ms-azuretools.vscode-docker"
+        name: "Docker"
+        url: "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"
+      - enabled: false
+        github: "https://github.com/Microsoft/vscode-remote-release"
+        id: "ms-vscode-remote.remote-containers"
+        name: "Dev Containers"
+        url: "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers"
+      - enabled: true
+        github: "https://github.com/Natizyskunk/vscode-sftp"
+        id: "Natizyskunk.sftp"
+        name: "SFTP"
+        url: "https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp"
+      - enabled: true
+        github: "https://github.com/material-extensions/vscode-material-icon-theme"
+        id: "PKief.material-icon-theme"
+        name: "Material Icon Theme"
+        url: "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"
+      - enabled: true
+        github: "https://github.com/richie5um/vscode-sort-json"
+        id: "richie5um2.vscode-sort-json"
+        name: "Sort JSON objects"
+        url: "https://marketplace.visualstudio.com/items?itemName=richie5um2.vscode-sort-json"
+      - enabled: true
+        github: "https://github.com/streetsidesoftware/vscode-spell-checker"
+        id: "streetsidesoftware.code-spell-checker"
+        name: "Code Spell Checker"
+        settings:
+          cSpell:
+            diagnosticLevel: "Hint"
+        url: "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
+      - enabled: true
+        github: "https://github.com/Tyriar/vscode-sort-lines"
+        id: "Tyriar.sort-lines"
+        name: "Sort lines"
+        url: "https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines"
+      - enabled: true
+        github: "https://github.com/usernamehw/vscode-error-lens"
+        id: "usernamehw.errorlens"
+        name: "Error Lens"
+        settings:
+          errorLens:
+            excludeBySource:
+              - "cSpell"
+        url: "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens"
+      - enabled: true
+        github: "https://github.com/MicrosoftDocs/intellicode"
+        id: "VisualStudioExptTeam.vscodeintellicode"
+        name: "IntelliCode"
+        url: "https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode"
+      - enabled: true
+        github: "https://github.com/Sertion/vscode-gitblame"
+        id: "waderyan.gitblame"
+        name: "Git Blame"
+        url: "https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame"
+      - enabled: true
+        github: "https://github.com/yoavbls/pretty-ts-errors"
+        id: "yoavbls.pretty-ts-errors"
+        name: "Pretty TypeScript Errors"
+        url: "https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors"
+      - enabled: true
+        github: "https://github.com/redhat-developer/vscode-yaml"
+        id: "redhat.vscode-yaml"
+        name: "YAML"
+        settings:
+          redhat:
+            telemetry:
+              enabled: false
+        url: "https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml"
+      - enabled: true
+        github: "https://github.com/pascalre/vscode-yaml-sort"
+        id: "PascalReitermann93.vscode-yaml-sort"
+        name: "YAML Sort"
+        settings:
+          vscode-yaml-sort:
+            forceQuotes: true
+            quotingType: '"'
+            sortArrays: true
+        url: "https://marketplace.visualstudio.com/items?itemName=PascalReitermann93.vscode-yaml-sort"
+      - enabled: true
+        github: "https://github.com/xabikos/vscode-javascript"
+        id: "xabikos.JavaScriptSnippets"
+        name: " JavaScript (ES6) code snippets "
+        url: "https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets&ssr=false#overview"
+      - enabled: true
+        github: "https://github.com/yzhang-gh/vscode-markdown"
+        id: "yzhang.markdown-all-in-one"
+        name: "Markdown All in One"
+        url: "https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one"
+    settings:
+      editor:
+        codeActionsOnSave:
+          source:
+            addMissingImports: "explicit"
+            fixAll:
+              eslint: "explicit"
+        defaultFormatter: "esbenp.prettier-vscode"
+        fontFamily: "'JetBrainsMonoNL NFM', 'monospace', monospace"
+        fontSize: 18
+        formatOnPaste: true
+        formatOnSave: true
+        linkedEditing: true
+        stickyScroll:
+          enabled: false
+      files:
+        autoSave: "afterDelay"
+        insertFinalNewline: true
+      git:
+        enableSmartCommit: true
+        openRepositoryInParentFolders: true
+      javascript:
+        preferences:
+          importModuleSpecifier: "non-relative"
+      typescript:
+        preferences:
+          importModuleSpecifier: "non-relative"
+      workbench:
+        colorTheme: "GitHub Dark"
+        iconTheme: "material-icon-theme"
+        startupEditor: "none"
