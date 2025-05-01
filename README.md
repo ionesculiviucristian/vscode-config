@@ -45,9 +45,9 @@ python manage_profiles.py
 
 ### Git / Gitlab
 
-- [~~Git Blame~~](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame): See git blame information in the status bar
+- [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame): See git blame information in the status bar
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): View a Git Graph of your repository, and perform Git actions from the graph
-- [~~Git History~~](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits
+- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits
 
 ### Linters / Formatters / Sorters
 
@@ -70,7 +70,7 @@ python manage_profiles.py
 }
 ```
 
-- [~~Even Better TOML~~](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml): Fully-featured TOML support
+- [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml): Fully-featured TOML support
 - [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins): Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Markdown linting and style checking for Visual Studio Code
@@ -95,7 +95,7 @@ python manage_profiles.py
 ```
 
 - [Text Power Tools](https://marketplace.visualstudio.com/items?itemName=qcz.text-power-tools): All-in-one solution with 240+ commands for text manipulation: filter lines (grep), remove lines, insert number sequences and GUIDs, sorting, change case, converting numbers, generating fake data and more
-- [~~XML~~](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml): XML Language Support by Red Hat
+- [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml): XML Language Support by Red Hat
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml): YAML Language Support by Red Hat, with built-in Kubernetes syntax support
 
 ```json
@@ -128,7 +128,7 @@ python manage_profiles.py
 }
 ```
 
-- [~~SFTP~~](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp): SFTP/FTP sync
+- [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp): SFTP/FTP sync
 
 ### Snippets
 
@@ -162,8 +162,8 @@ python manage_profiles.py
 
 ### Docker
 
-- [~~Dev Containers~~](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers): Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set
-- [~~Docker~~](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker): Makes it easy to create, manage, and debug containerized applications
+- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers): Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set
+- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker): Makes it easy to create, manage, and debug containerized applications
 
 ### Git / Gitlab
 
@@ -187,7 +187,7 @@ python manage_profiles.py
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): Launch a development local Server with live reload feature for static & dynamic pages
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Real-time collaborative development from the comfort of your favorite tools
 - [MetaGo](https://marketplace.visualstudio.com/items?itemName=metaseed.metago): vscode cursor move and select; jump, navigation, goto, acejump
-- [~~NPM~~](https://marketplace.visualstudio.com/items?itemName=idered.npm): Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun
+- [NPM](https://marketplace.visualstudio.com/items?itemName=idered.npm): Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun
 - [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi): OpenAPI editing, validation and preview in VS Code
 - [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock): Subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which
 - [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml): Rich PlantUML support for Visual Studio Code

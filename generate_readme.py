@@ -35,8 +35,7 @@ with open("profiles.json", "r") as f1:
                 extensions.sort(key=lambda x: x["name"].lower())
 
                 for extension in extensions:
-                    name = f"~~{extension['name']}~~" if "disabled" in extension else extension["name"]
-                    entry = f"- [{name}]({base_extensions_url}?itemName={extension['id']})"
+                    entry = f"- [{extension["name"]}]({base_extensions_url}?itemName={extension['id']})"
                     if "description" in extension:
                         entry += f": {extension['description']}"
                     if "settings" in extension:

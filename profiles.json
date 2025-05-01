@@ -21,14 +21,12 @@
       {
         "category": "Linters / Formatters / Sorters",
         "description": "XML Language Support by Red Hat",
-        "disabled": true,
         "id": "redhat.vscode-xml",
         "name": "XML"
       },
       {
         "category": "Git / Gitlab",
         "description": "See git blame information in the status bar",
-        "disabled": true,
         "id": "waderyan.gitblame",
         "name": "Git Blame"
       },
@@ -41,7 +39,6 @@
       {
         "category": "Git / Gitlab",
         "description": "View git log, file history, compare branches or commits",
-        "disabled": true,
         "id": "donjayamanne.githistory",
         "name": "Git History"
       },
@@ -80,7 +77,6 @@
       {
         "category": "Linters / Formatters / Sorters",
         "description": "Fully-featured TOML support",
-        "disabled": true,
         "id": "tamasfe.even-better-toml",
         "name": "Even Better TOML"
       },
@@ -156,7 +152,6 @@
       {
         "category": "Other",
         "description": "SFTP/FTP sync",
-        "disabled": true,
         "id": "Natizyskunk.sftp",
         "name": "SFTP"
       },
@@ -371,21 +366,18 @@
       {
         "category": "Docker",
         "description": "Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set",
-        "disabled": true,
         "id": "ms-vscode-remote.remote-containers",
         "name": "Dev Containers"
       },
       {
         "category": "Docker",
         "description": "Makes it easy to create, manage, and debug containerized applications",
-        "disabled": true,
         "id": "ms-azuretools.vscode-docker",
         "name": "Docker"
       },
       {
         "category": "Other",
         "description": "Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun",
-        "disabled": true,
         "id": "idered.npm",
         "name": "NPM"
       }
