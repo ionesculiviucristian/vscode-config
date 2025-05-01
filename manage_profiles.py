@@ -45,6 +45,8 @@ class Manager:
         if not os.path.exists(self.storage_file_path):
             raise Exception(f"Storage file not found at {self.storage_file_path}")
 
+        self.primary_profile_settings = []
+
     def profile_exists(self, profile: Profile):
         with open(self.storage_file_path, "r") as f:
             data = json.load(f)
@@ -124,8 +126,11 @@ class Manager:
 
         profile_settings = self.compile_profile_settings(profile)
 
+        if not primary_profile:
+            self.primary_profile_settings = profile_settings
+
         if primary_profile:
-            profile_settings += self.compile_profile_settings(primary_profile)
+            profile_settings += self.primary_profile_settings
 
         self.save_profile_settings(profile, profile_settings)
 
