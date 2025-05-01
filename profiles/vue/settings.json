@@ -1,7 +1,0 @@
-{
-  "[vue]": {
-    "editor.codeActionsOnSave": {
-      "source.addMissingImports": "never"
-    }
-  }
-}

@@ -1,171 +1,292 @@
-# Visual Studio Code settings & profiles
+# List of available profiles
 
 ```bash
-# Install prerequisites
-sudo apt install jq
-
-# Add Ollama LLMs
-curl -fsSL https://ollama.com/install.sh | sh
-ollama pull deepseek-coder:6.7b-instruct-q8_0
-ollama pull llama3:8b-instruct-q8_0
-cp ./configs/continue.json ~/.continue/config.json
-
-# Fire it up!
-./setup.sh install_profiles
-
-# Revert to the original editor state
-# Keep in mind that this will uninstall ALL profiles!
-./setup.sh uninstall_profiles
+python manage_profiles.py
 ```
 
-## Profiles
+## Enhanced profile
 
-- Extended
-
-  - Docker
-    - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-    - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-  - Git / Gitlab
-    - [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
-    - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-    - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-  - Linters / Formatters / Sorters
-
-    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-    - [Dotenv Official +Vault](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode)
-    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-    - [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
-    - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-    - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-    - [Sort JSON objects](https://marketplace.visualstudio.com/items?itemName=richie5um2.vscode-sort-json)
-    - [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
-    - [YAML Sort](https://marketplace.visualstudio.com/items?itemName=PascalReitermann93.vscode-yaml-sort)
-
-  - Others
-    - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
-    - [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins)
-    - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
-    - [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
-    - [JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
-    - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-    - [NPM](https://marketplace.visualstudio.com/items?itemName=idered.npm)
-    - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
-    - [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
-    - [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp)
-    - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
-  - Snippets
-    - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
-  - Themes
-    - [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
-    - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-
-- Experimental
-  - [Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible)
-  - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
-  - [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
-  - [Continue - Codestral, GPT-4o, and more](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
-  - [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
-  - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-  - [Format in context menus](https://marketplace.visualstudio.com/items?itemName=lacroixdavid1.vscode-format-context-menu)
-  - [Geo Data Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer)
-  - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
-  - [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)
-  - [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete)
-  - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
-  - [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
-  - [MetaGo](https://marketplace.visualstudio.com/items?itemName=metaseed.metago)
-  - [MongoDB for VS Code](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
-  - [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
-  - [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
-  - [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
-  - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
-  - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-  - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)
-  - [Text Power Tools](https://marketplace.visualstudio.com/items?itemName=qcz.text-power-tools)
-  - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-  - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-  - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml)
-- php
-  - [Composer](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.composer-php-vscode)
-  - [PHP Awesome Snippets](https://marketplace.visualstudio.com/items?itemName=hakcorp.php-awesome-snippets)
-  - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
-  - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
-- Python
-  - [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml)
-  - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
-  - [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
-  - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
-  - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- Vue
-  - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-## Testing scenarios
-
-### HTML/CSS/JavaScript/TypeScript/Vue (Vuetify)
-
-```bash
-# Install Vuetify prerequisites
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-nvm install 20
-nvm use 20
-
-# Create a new Vuetify project
-cd ~/Projects
-npm create vuetify
-
-# Open the project
-code --profile Vue ~/Projects/vuetify-app
-
-# Start serving the app
-cd ~/Projects/vuetify-app
-npm run dev
+```json
+{
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": "explicit"
+    },
+    "editor.fontFamily": "'JetBrainsMonoNL Nerd Font Mono', 'monospace', monospace",
+    "editor.fontSize": 18,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "editor.stickyScroll.enabled": false,
+    "files.autoSave": "afterDelay",
+    "files.insertFinalNewline": true,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "always",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "workbench.startupEditor": "none"
+}
 ```
 
-### Python (Django)
+### Diagnostic
 
-```bash
-# Install Django prerequisites
-sudo pacman -Syu python-django
-curl -sSL https://install.python-poetry.org | python3 -
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics
 
-# Create a new Django project
-cd ~/Projects
-django-admin startproject django_app
-poetry init --no-interaction
-poetry config --local virtualenvs.in-project true
-poetry add django
-
-# Open the project
-code --profile Python ~/Projects/django_app
-
-# Start serving the app
-cd ~/Projects/django_app
-poetry run python manage.py runserver
+```json
+{
+    "errorLens.excludeBySource": [
+        "cSpell"
+    ]
+}
 ```
 
-### php (Laravel)
+- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): Display import/require package size in the editor
+- [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors): Make TypeScript errors prettier and more human-readable in VSCode
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree): Show TODO, FIXME, etc. comment tags in a tree view
+
+### Git / Gitlab
+
+- [~~Git Blame~~](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame): See git blame information in the status bar
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): View a Git Graph of your repository, and perform Git actions from the graph
+- [~~Git History~~](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits
+
+### Linters / Formatters / Sorters
+
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker): Spelling checker for source code
+
+```json
+{
+    "cSpell.diagnosticLevel": "Hint"
+}
+```
+
+- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv): Support for dotenv file syntax
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): Integrates ESLint JavaScript into VS Code
+
+```json
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    }
+}
+```
+
+- [~~Even Better TOML~~](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml): Fully-featured TOML support
+- [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins): Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
+- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Markdown linting and style checking for Visual Studio Code
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): Code formatter using prettier
+
+```json
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+```
+
+- [Sort JSON objects](https://marketplace.visualstudio.com/items?itemName=richie5um2.vscode-sort-json): Sorts the keys within JSON objects
+- [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines): Sorts lines of text
+- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint): Official Stylelint extension for Visual Studio Code
+
+```json
+{
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false
+}
+```
+
+- [Text Power Tools](https://marketplace.visualstudio.com/items?itemName=qcz.text-power-tools): All-in-one solution with 240+ commands for text manipulation: filter lines (grep), remove lines, insert number sequences and GUIDs, sorting, change case, converting numbers, generating fake data and more
+- [~~XML~~](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml): XML Language Support by Red Hat
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml): YAML Language Support by Red Hat, with built-in Kubernetes syntax support
+
+```json
+{
+    "redhat.telemetry.enabled": false
+}
+```
+
+- [YAML Sort](https://marketplace.visualstudio.com/items?itemName=PascalReitermann93.vscode-yaml-sort): YAML Sort extends VS Code to sort, format and validate YAML files
+
+```json
+{
+    "vscode-yaml-sort.forceQuotes": true,
+    "vscode-yaml-sort.quotingType": "\"",
+    "vscode-yaml-sort.sortArrays": true
+}
+```
+
+
+### Other
+
+- [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode): AI-assisted development
+- [JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster): Boost your productivity with advanced JavaScript/TypeScript refactorings and commands
+- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense): Visual Studio Code plugin that autocompletes filenames
+
+```json
+{
+    "javascript.suggest.paths": false,
+    "typescript.suggest.paths": false
+}
+```
+
+- [~~SFTP~~](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp): SFTP/FTP sync
+
+### Snippets
+
+- [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets): Code snippets for JavaScript in ES6 syntax
+
+### Themes
+
+- [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme): GitHub theme for VS Code
+
+```json
+{
+    "workbench.colorTheme": "GitHub Dark"
+}
+```
+
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme): Material Design Icons for Visual Studio Code
+
+```json
+{
+    "workbench.iconTheme": "material-icon-theme"
+}
+```
+
+
+## Experimental profile
+
+### Databases
+
+- [MongoDB for VS Code](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode): Connect to MongoDB and Atlas directly from your VS Code environment, navigate your databases and collections, inspect your schema and use playgrounds to prototype queries and aggregations
+- [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): Connecting users to many of the most commonly used databases. Welcome to database management done right
+
+### Docker
+
+- [~~Dev Containers~~](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers): Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set
+- [~~Docker~~](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker): Makes it easy to create, manage, and debug containerized applications
+
+### Git / Gitlab
+
+- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github): Pull Request and Issue Provider for GitHub
+- [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow): Official GitLab-maintained extension for Visual Studio Code
+
+### Linters / Formatters / Sorters
+
+- [Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible): Ansible language support
+- [Format in context menus](https://marketplace.visualstudio.com/items?itemName=lacroixdavid1.vscode-format-context-menu): VSCode extension to format multiple files with right click context menu
+- [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua): Lua Language Server coded by Lua
+
+### Other
+
+- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks): Mark lines and jump to them
+- [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap):  Take beautiful screenshots of your code
+- [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio): This unofficial extension integrates Draw.io into VS Code
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): EditorConfig Support for Visual Studio Code
+- [Geo Data Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer): Geo Data Analytics tool for VSCode IDE with kepler.gl support to generate and view maps
+- [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete): To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): Launch a development local Server with live reload feature for static & dynamic pages
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Real-time collaborative development from the comfort of your favorite tools
+- [MetaGo](https://marketplace.visualstudio.com/items?itemName=metaseed.metago): vscode cursor move and select; jump, navigation, goto, acejump
+- [~~NPM~~](https://marketplace.visualstudio.com/items?itemName=idered.npm): Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun
+- [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi): OpenAPI editing, validation and preview in VS Code
+- [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock): Subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which
+- [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml): Rich PlantUML support for Visual Studio Code
+- [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager): Easily switch between projects
+- [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack): An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set
+
+## PHP profile
+
+```json
+{
+    "[php]": {
+        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+    }
+}
+```
+
+- [Composer](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.composer-php-vscode): All-in-One composer integration, quick actions, commands, automatic installation, tasks, code lenses, diagnostics, and composer.json IntelliSense
+- [PHP Awesome Snippets](https://marketplace.visualstudio.com/items?itemName=hakcorp.php-awesome-snippets): A fullset of snippets for PHP devs to boost coding productivity
+- [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug): Debug support for PHP with Xdebug
+- [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client): PHP code intelligence for Visual Studio Code
+
+```json
+{
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    }
+}
+```
+
+
+## Python profile
+
+```json
+{
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
+        "editor.defaultFormatter": null,
+        "terminal.activateEnvironment": false
+    }
+}
+```
+
+- [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml): Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates
+- [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter): Formatting support for Python files using the Black formatter
+
+```json
+{
+    "black-formatter.args": [
+        "--line-length",
+        "120"
+    ]
+}
+```
+
+- [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8): Linting support for Python files using Flake8
+
+```json
+{
+    "flake8.args": [
+        "--max-line-length=120"
+    ]
+}
+```
+
+- [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort): Import organization support for Python files using isort
+
+```json
+{
+    "isort.args": [
+        "--profile",
+        "black"
+    ]
+}
+```
+
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance): A performant, feature-rich language server for Python in VS Code
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more
+
+## React profile
+
+- [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets): Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier
+
+## Vue profile
+
+```json
+{
+    "[vue]": {
+        "editor.codeActionsOnSave": {
+            "source.addMissingImports": "never"
+        }
+    }
+}
+```
+
+- [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar): Language Support for Vue
+
 
 ```bash
-# Install Laravel prerequisites
-sudo pacman -Syu php
-echo 'extension=pdo_sqlite' | sudo tee /etc/php/conf.d/extensions.ini
-
-# Install composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-sudo mv composer.phar /usr/local/bin/composer
-
-# Create a new Laravel project
-composer create-project laravel/laravel ~/Projects/laravel-app
-
-# Open the project
-code --profile php ~/Projects/laravel-app
-
-# Start serving the app
-cd ~/Projects/laravel-app
-php artisan serve
+python generate_readme.py
 ```
