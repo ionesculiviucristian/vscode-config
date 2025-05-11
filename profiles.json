@@ -172,20 +172,39 @@
       },
       {
         "category": "Themes",
-        "description": "GitHub theme for VS Code",
-        "id": "GitHub.github-vscode-theme",
-        "name": "GitHub Theme",
+        "description": "Soothing pastel theme for VSCode",
+        "id": "Catppuccin.catppuccin-vsc",
+        "name": "Catppuccin for VSCode",
         "settings": {
-          "workbench.colorTheme": "GitHub Dark"
+          "catppuccin.accentColor": "pink",
+          "catppuccin.colorOverrides": {
+            "mocha": {
+              "base": "#000000",
+              "crust": "#020202",
+              "mantle": "#010101"
+            }
+          },
+          "catppuccin.customUIColors": {
+            "mocha": {
+              "statusBar.foreground": "accent"
+            }
+          },
+          "editor.semanticHighlighting.enabled": true,
+          "gopls": {
+            "ui.semanticTokens": true
+          },
+          "terminal.integrated.minimumContrastRatio": 1,
+          "window.titleBarStyle": "custom",
+          "workbench.colorTheme": "Catppuccin Mocha"
         }
       },
       {
         "category": "Themes",
-        "description": "Material Design Icons for Visual Studio Code",
-        "id": "PKief.material-icon-theme",
-        "name": "Material Icon Theme",
+        "description": "Soothing pastel icon theme for VSCode",
+        "id": "Catppuccin.catppuccin-vsc-icons",
+        "name": "Catppuccin Icons for VSCode",
         "settings": {
-          "workbench.iconTheme": "material-icon-theme"
+          "workbench.iconTheme": "catppuccin-mocha"
         }
       },
       {
