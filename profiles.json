@@ -2,6 +2,18 @@
   {
     "extensions": [
       {
+        "category": "AI",
+        "description": "Your AI pair programmer",
+        "id": "GitHub.copilot",
+        "name": "GitHub Copilot"
+      },
+      {
+        "category": "AI",
+        "description": "AI chat features powered by Copilot",
+        "id": "GitHub.copilot-chat",
+        "name": "GitHub Copilot Chat"
+      },
+      {
         "category": "Linters / Formatters / Sorters",
         "description": "Official Stylelint extension for Visual Studio Code",
         "id": "stylelint.vscode-stylelint",
