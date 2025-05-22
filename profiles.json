@@ -2,6 +2,12 @@
   {
     "extensions": [
       {
+        "category": "Docker",
+        "description": "An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set",
+        "id": "ms-vscode-remote.vscode-remote-extensionpack",
+        "name": "Remote Development"
+      },
+      {
         "category": "AI",
         "description": "Your AI pair programmer",
         "id": "GitHub.copilot",
@@ -383,22 +389,10 @@
         "name": "Project Manager"
       },
       {
-        "category": "Other",
-        "description": "An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set",
-        "id": "ms-vscode-remote.vscode-remote-extensionpack",
-        "name": "Remote Development"
-      },
-      {
         "category": "Databases",
         "description": "Connecting users to many of the most commonly used databases. Welcome to database management done right",
         "id": "mtxr.sqltools",
         "name": "SQLTools"
-      },
-      {
-        "category": "Docker",
-        "description": "Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set",
-        "id": "ms-vscode-remote.remote-containers",
-        "name": "Dev Containers"
       },
       {
         "category": "Docker",
