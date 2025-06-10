@@ -1,3 +1,8 @@
+## Additional notes
+
+Install pre commit hooks
+
 ```bash
-python generate_readme.py
+pip install pre-commit
+pre-commit install
 ```

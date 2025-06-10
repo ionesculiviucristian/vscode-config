@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+      - id: generate-readme
+        name: Generate README.md
+        entry: python generate_readme.py
+        language: system

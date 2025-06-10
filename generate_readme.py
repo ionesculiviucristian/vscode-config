@@ -17,7 +17,7 @@ with open("profiles.json", "r") as f1:
         profiles.sort(key=lambda x: x["name"].lower())
 
         for profile in profiles:
-            f2.write(f"## {profile['name']} profile\n\n")
+            f2.write(f"### {profile['name']} profile\n\n")
 
             if "settings" in profile:
                 f2.write(f"```json\n{json.dumps(profile['settings'], indent=4)}\n```\n\n")
@@ -30,7 +30,7 @@ with open("profiles.json", "r") as f1:
 
             for category, extensions in sorted(categories.items()):
                 if category:
-                    f2.write(f"### {category}\n\n")
+                    f2.write(f"#### {category}\n\n")
 
                 extensions.sort(key=lambda x: x["name"].lower())
 
