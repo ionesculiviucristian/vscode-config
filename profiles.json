@@ -194,19 +194,6 @@
         "id": "Catppuccin.catppuccin-vsc",
         "name": "Catppuccin for VSCode",
         "settings": {
-          "catppuccin.accentColor": "pink",
-          "catppuccin.colorOverrides": {
-            "mocha": {
-              "base": "#000000",
-              "crust": "#020202",
-              "mantle": "#010101"
-            }
-          },
-          "catppuccin.customUIColors": {
-            "mocha": {
-              "statusBar.foreground": "accent"
-            }
-          },
           "editor.semanticHighlighting.enabled": true,
           "gopls": {
             "ui.semanticTokens": true

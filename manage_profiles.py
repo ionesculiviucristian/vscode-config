@@ -1,8 +1,9 @@
+import argparse
 import json
 import os
 import shutil
 import subprocess
-from typing import Dict, List, TypedDict, Union
+from typing import Dict, List, Optional, TypedDict, Union
 
 DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() == "true"
 
@@ -61,16 +62,16 @@ class Manager:
         with open(self.storage_file_path, "r") as f:
             data = json.load(f)
 
-        profile = {"location": profile["id"], "name": profile["name"]}
+        userDataProfile = {"location": profile["id"], "name": profile["name"]}
 
         if "userDataProfiles" in data:
-            data["userDataProfiles"].append(profile)
+            data["userDataProfiles"].append(userDataProfile)
         else:
-            data["userDataProfiles"] = [profile]
+            data["userDataProfiles"] = [userDataProfile]
 
         with open(self.storage_file_path, "w") as f:
             json.dump(data, f, indent=2)
-        debug(f"Created profile {profile['name']}")
+        debug(f"Created profile {userDataProfile['name']}")
 
     def install_profile_extension(self, profile: Profile, extension: Extension):
         try:
@@ -111,7 +112,7 @@ class Manager:
 
         return settings
 
-    def install_profile(self, profile: Profile, primary_profile: Profile = None):
+    def install_profile(self, profile: Profile, primary_profile: Optional[Profile] = None):
         if not self.profile_exists(profile):
             self.create_profile(profile)
 
@@ -147,10 +148,42 @@ class Manager:
                 continue
             self.install_profile(profile, primary_profile)
 
+    def uninstall_profile(self, profile: Profile):
+        with open(self.storage_file_path, "r") as f:
+            data = json.load(f)
+
+        data["userDataProfiles"] = [p for p in data.get("userDataProfiles", []) if p.get("location") != profile["id"]]
+
+        with open(self.storage_file_path, "w") as f:
+            json.dump(data, f, indent=2)
+
+        profile_path = os.path.join(self.profiles_dir_path, profile["id"])
+        if os.path.exists(profile_path):
+            shutil.rmtree(profile_path)
+        debug(f"Removed profile {profile['name']}")
+
+    def uninstall(self):
+        with open("profiles.json", "r") as f:
+            profiles = json.load(f)
+
+        for profile in profiles:
+            self.uninstall_profile(profile)
+
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Manage VSCode profiles")
+    parser.add_argument("--install", action="store_true", help="Install all profiles")
+    parser.add_argument("--uninstall", action="store_true", help="Uninstall all profiles")
+    args = parser.parse_args()
+
     manager = Manager()
-    manager.install()
+
+    if args.install:
+        manager.install()
+    elif args.uninstall:
+        manager.uninstall()
+    else:
+        print("No action specified. Use --install or --uninstall")
 
 
 if __name__ == "__main__":

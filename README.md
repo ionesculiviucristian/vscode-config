@@ -1,29 +1,33 @@
 # List of available profiles
 
 ```bash
-python manage_profiles.py
+# Install profiles
+python manage_profiles.py --install
+
+# Uninstall profiles
+python manage_profiles.py --uninstall
 ```
 
 ## Enhanced profile
 
 ```json
 {
-    "editor.codeActionsOnSave": {
-        "source.addMissingImports": "explicit"
-    },
-    "editor.fontFamily": "'JetBrainsMonoNL Nerd Font Mono', 'monospace', monospace",
-    "editor.fontSize": 18,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.linkedEditing": true,
-    "editor.stickyScroll.enabled": false,
-    "files.autoSave": "afterDelay",
-    "files.insertFinalNewline": true,
-    "git.enableSmartCommit": true,
-    "git.openRepositoryInParentFolders": "always",
-    "javascript.preferences.importModuleSpecifier": "non-relative",
-    "typescript.preferences.importModuleSpecifier": "non-relative",
-    "workbench.startupEditor": "none"
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit"
+  },
+  "editor.fontFamily": "'JetBrainsMonoNL Nerd Font Mono', 'monospace', monospace",
+  "editor.fontSize": 18,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": false,
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "always",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "workbench.startupEditor": "none"
 }
 ```
 
@@ -33,9 +37,7 @@ python manage_profiles.py
 
 ```json
 {
-    "errorLens.excludeBySource": [
-        "cSpell"
-    ]
+  "errorLens.excludeBySource": ["cSpell"]
 }
 ```
 
@@ -55,7 +57,7 @@ python manage_profiles.py
 
 ```json
 {
-    "cSpell.diagnosticLevel": "Hint"
+  "cSpell.diagnosticLevel": "Hint"
 }
 ```
 
@@ -64,9 +66,9 @@ python manage_profiles.py
 
 ```json
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    }
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
 }
 ```
 
@@ -78,7 +80,7 @@ python manage_profiles.py
 
 ```json
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
 
@@ -88,9 +90,9 @@ python manage_profiles.py
 
 ```json
 {
-    "css.validate": false,
-    "less.validate": false,
-    "scss.validate": false
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
 ```
 
@@ -100,7 +102,7 @@ python manage_profiles.py
 
 ```json
 {
-    "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false
 }
 ```
 
@@ -108,12 +110,11 @@ python manage_profiles.py
 
 ```json
 {
-    "vscode-yaml-sort.forceQuotes": true,
-    "vscode-yaml-sort.quotingType": "\"",
-    "vscode-yaml-sort.sortArrays": true
+  "vscode-yaml-sort.forceQuotes": true,
+  "vscode-yaml-sort.quotingType": "\"",
+  "vscode-yaml-sort.sortArrays": true
 }
 ```
-
 
 ### Other
 
@@ -123,8 +124,8 @@ python manage_profiles.py
 
 ```json
 {
-    "javascript.suggest.paths": false,
-    "typescript.suggest.paths": false
+  "javascript.suggest.paths": false,
+  "typescript.suggest.paths": false
 }
 ```
 
@@ -140,7 +141,7 @@ python manage_profiles.py
 
 ```json
 {
-    "workbench.colorTheme": "GitHub Dark"
+  "workbench.colorTheme": "GitHub Dark"
 }
 ```
 
@@ -148,10 +149,9 @@ python manage_profiles.py
 
 ```json
 {
-    "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme"
 }
 ```
-
 
 ## Experimental profile
 
@@ -179,7 +179,7 @@ python manage_profiles.py
 ### Other
 
 - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks): Mark lines and jump to them
-- [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap):  Take beautiful screenshots of your code
+- [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap): Take beautiful screenshots of your code
 - [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio): This unofficial extension integrates Draw.io into VS Code
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): EditorConfig Support for Visual Studio Code
 - [Geo Data Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer): Geo Data Analytics tool for VSCode IDE with kepler.gl support to generate and view maps
@@ -198,9 +198,9 @@ python manage_profiles.py
 
 ```json
 {
-    "[php]": {
-        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
-    }
+  "[php]": {
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+  }
 }
 ```
 
@@ -211,24 +211,23 @@ python manage_profiles.py
 
 ```json
 {
-    "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    }
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  }
 }
 ```
-
 
 ## Python profile
 
 ```json
 {
-    "[python]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
-        },
-        "editor.defaultFormatter": null,
-        "terminal.activateEnvironment": false
-    }
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    },
+    "editor.defaultFormatter": null,
+    "terminal.activateEnvironment": false
+  }
 }
 ```
 
@@ -237,10 +236,7 @@ python manage_profiles.py
 
 ```json
 {
-    "black-formatter.args": [
-        "--line-length",
-        "120"
-    ]
+  "black-formatter.args": ["--line-length", "120"]
 }
 ```
 
@@ -248,9 +244,7 @@ python manage_profiles.py
 
 ```json
 {
-    "flake8.args": [
-        "--max-line-length=120"
-    ]
+  "flake8.args": ["--max-line-length=120"]
 }
 ```
 
@@ -258,10 +252,7 @@ python manage_profiles.py
 
 ```json
 {
-    "isort.args": [
-        "--profile",
-        "black"
-    ]
+  "isort.args": ["--profile", "black"]
 }
 ```
 
@@ -276,16 +267,15 @@ python manage_profiles.py
 
 ```json
 {
-    "[vue]": {
-        "editor.codeActionsOnSave": {
-            "source.addMissingImports": "never"
-        }
+  "[vue]": {
+    "editor.codeActionsOnSave": {
+      "source.addMissingImports": "never"
     }
+  }
 }
 ```
 
 - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar): Language Support for Vue
-
 
 ```bash
 python generate_readme.py
