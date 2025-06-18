@@ -43,6 +43,12 @@
         "name": "XML"
       },
       {
+        "category": "Linters / Formatters / Sorters",
+        "description": "Integrates ShellCheck into VS Code, a linter for Shell scripts",
+        "id": "timonwong.shellcheck",
+        "name": "ShellCheck"
+      },
+      {
         "category": "Git / Gitlab",
         "description": "See git blame information in the status bar",
         "id": "waderyan.gitblame",
