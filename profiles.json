@@ -46,7 +46,12 @@
         "category": "Linters / Formatters / Sorters",
         "description": "Integrates ShellCheck into VS Code, a linter for Shell scripts",
         "id": "timonwong.shellcheck",
-        "name": "ShellCheck"
+        "name": "ShellCheck",
+        "settings": {
+          "shellcheck.ignorePatterns": {
+            "**/*.profile": true
+          }
+        }
       },
       {
         "category": "Git / Gitlab",
