@@ -2,7 +2,7 @@
 
 - [Usage](#usage)
 - [List of available profiles](#list-of-available-profiles)
-<% profiles.sort(sortProfiles).forEach(function(profile){ %>
+<% profiles.forEach(function(profile){ %>
 <%- `  - [${profile.name}](#${slugify(profile.name)})` -%>
 <% }); %>
 - [Additional notes](#additional-notes)

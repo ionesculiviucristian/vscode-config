@@ -351,9 +351,9 @@ pip install pre-commit
 pre-commit install
 ```
 
-Render README.md file
+Render README.md
 
 ```bash
 npm install
-node ./readme/render-readme.js
+node ./templates/render-readme.js
 ```
