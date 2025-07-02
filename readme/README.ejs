@@ -1,4 +1,4 @@
-<%- include('partials/header.ejs'); -%>
+<%- include('partials/header.ejs', { profiles, sortProfiles, slugify }); -%>
 
 ## List of available profiles
 <% profiles.sort(sortProfiles).forEach(function(profile){ %>
@@ -8,8 +8,10 @@
 <% } %>
 <% profile.extensions.sort(sortExtensions).forEach(function(extension){ %>
 - [<%- extension.name %>](https://marketplace.visualstudio.com/items?itemName=<%- extension.id %>): <%- extension.description -%>
+<% if (extension.settings) { %>
+<%- `${extension.settings}` -%>
+<% } %>
 <% }); -%>
-
 <% }); -%>
 
 <%- include('partials/footer.ejs'); -%>
