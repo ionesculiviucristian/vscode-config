@@ -9,7 +9,7 @@
   - [Python](#python)
   - [React](#react)
   - [Vue](#vue)
-- [Additional notes](#additional-notes)
+- [Developing](#developing)
 
 ## Usage
 
@@ -342,7 +342,7 @@ python manage_profiles.py --uninstall
 
 - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar): Language Support for Vue
 
-## Additional notes
+## Developing
 
 Install pre commit hooks
 
