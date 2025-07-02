@@ -47,7 +47,8 @@
         "name": "ShellCheck",
         "settings": {
           "shellcheck.ignorePatterns": {
-            "**/*.profile": true
+            "**/*.profile": true,
+            "**/*.env*": true
           }
         }
       },
