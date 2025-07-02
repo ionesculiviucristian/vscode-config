@@ -2,25 +2,26 @@
   {
     "extensions": [
       {
-        "category": "Docker",
+        "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
+        "id": "aaron-bond.better-comments",
+        "name": "Better Comments"
+      },
+      {
         "description": "An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set",
         "id": "ms-vscode-remote.vscode-remote-extensionpack",
         "name": "Remote Development"
       },
       {
-        "category": "AI",
         "description": "Your AI pair programmer",
         "id": "GitHub.copilot",
         "name": "GitHub Copilot"
       },
       {
-        "category": "AI",
         "description": "AI chat features powered by Copilot",
         "id": "GitHub.copilot-chat",
         "name": "GitHub Copilot Chat"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Official Stylelint extension for Visual Studio Code",
         "id": "stylelint.vscode-stylelint",
         "name": "Stylelint",
@@ -31,19 +32,16 @@
         }
       },
       {
-        "category": "Diagnostic",
         "description": "Show TODO, FIXME, etc. comment tags in a tree view",
         "id": "Gruntfuggly.todo-tree",
         "name": "Todo Tree"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "XML Language Support by Red Hat",
         "id": "redhat.vscode-xml",
         "name": "XML"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Integrates ShellCheck into VS Code, a linter for Shell scripts",
         "id": "timonwong.shellcheck",
         "name": "ShellCheck",
@@ -54,25 +52,21 @@
         }
       },
       {
-        "category": "Git / Gitlab",
         "description": "See git blame information in the status bar",
         "id": "waderyan.gitblame",
         "name": "Git Blame"
       },
       {
-        "category": "Git / Gitlab",
         "description": "View a Git Graph of your repository, and perform Git actions from the graph",
         "id": "mhutchie.git-graph",
         "name": "Git Graph"
       },
       {
-        "category": "Git / Gitlab",
         "description": "View git log, file history, compare branches or commits",
         "id": "donjayamanne.githistory",
         "name": "Git History"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Spelling checker for source code",
         "id": "streetsidesoftware.code-spell-checker",
         "name": "Code Spell Checker",
@@ -81,19 +75,16 @@
         }
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "All-in-one solution with 240+ commands for text manipulation: filter lines (grep), remove lines, insert number sequences and GUIDs, sorting, change case, converting numbers, generating fake data and more",
         "id": "qcz.text-power-tools",
         "name": "Text Power Tools"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Support for dotenv file syntax",
         "id": "mikestead.dotenv",
         "name": "DotENV"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Integrates ESLint JavaScript into VS Code",
         "id": "dbaeumer.vscode-eslint",
         "name": "ESLint",
@@ -104,19 +95,16 @@
         }
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Fully-featured TOML support",
         "id": "tamasfe.even-better-toml",
         "name": "Even Better TOML"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Markdown linting and style checking for Visual Studio Code",
         "id": "DavidAnson.vscode-markdownlint",
         "name": "markdownlint"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Code formatter using prettier",
         "id": "esbenp.prettier-vscode",
         "name": "Prettier - Code formatter",
@@ -125,19 +113,16 @@
         }
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Sorts the keys within JSON objects",
         "id": "richie5um2.vscode-sort-json",
         "name": "Sort JSON objects"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Sorts lines of text",
         "id": "Tyriar.sort-lines",
         "name": "Sort lines"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "YAML Sort extends VS Code to sort, format and validate YAML files",
         "id": "PascalReitermann93.vscode-yaml-sort",
         "name": "YAML Sort",
@@ -148,7 +133,6 @@
         }
       },
       {
-        "category": "Diagnostic",
         "description": "Improve highlighting of errors, warnings and other language diagnostics",
         "id": "usernamehw.errorlens",
         "name": "Error Lens",
@@ -157,13 +141,11 @@
         }
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)",
         "id": "yzhang.markdown-all-in-one",
         "name": "Markdown All in One"
       },
       {
-        "category": "Other",
         "description": "Visual Studio Code plugin that autocompletes filenames",
         "id": "christian-kohler.path-intellisense",
         "name": "Path Intellisense",
@@ -173,19 +155,16 @@
         }
       },
       {
-        "category": "Diagnostic",
         "description": "Make TypeScript errors prettier and more human-readable in VSCode",
         "id": "yoavbls.pretty-ts-errors",
         "name": "Pretty TypeScript Errors"
       },
       {
-        "category": "Other",
         "description": "SFTP/FTP sync",
         "id": "Natizyskunk.sftp",
         "name": "SFTP"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "YAML Language Support by Red Hat, with built-in Kubernetes syntax support",
         "id": "redhat.vscode-yaml",
         "name": "YAML",
@@ -194,13 +173,11 @@
         }
       },
       {
-        "category": "Snippets",
         "description": "Code snippets for JavaScript in ES6 syntax",
         "id": "xabikos.JavaScriptSnippets",
         "name": "JavaScript (ES6) code snippets"
       },
       {
-        "category": "Themes",
         "description": "Soothing pastel theme for VSCode",
         "id": "Catppuccin.catppuccin-vsc",
         "name": "Catppuccin for VSCode",
@@ -215,7 +192,6 @@
         }
       },
       {
-        "category": "Themes",
         "description": "Soothing pastel icon theme for VSCode",
         "id": "Catppuccin.catppuccin-vsc-icons",
         "name": "Catppuccin Icons for VSCode",
@@ -224,25 +200,21 @@
         }
       },
       {
-        "category": "Diagnostic",
         "description": "Display import/require package size in the editor",
         "id": "wix.vscode-import-cost",
         "name": "Import Cost"
       },
       {
-        "category": "Other",
         "description": "AI-assisted development",
         "id": "VisualStudioExptTeam.vscodeintellicode",
         "name": "IntelliCode"
       },
       {
-        "category": "Other",
         "description": "Boost your productivity with advanced JavaScript/TypeScript refactorings and commands",
         "id": "sburg.vscode-javascript-booster",
         "name": "JavaScript Booster"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins",
         "id": "nhoizey.gremlins",
         "name": "Gremlins tracker for Visual Studio Code"
@@ -273,133 +245,111 @@
   {
     "extensions": [
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Ansible language support",
         "id": "redhat.ansible",
         "name": "Ansible"
       },
       {
-        "category": "Other",
         "description": "Mark lines and jump to them",
         "id": "alefragnani.Bookmarks",
         "name": "Bookmarks"
       },
       {
-        "category": "Other",
         "description": " Take beautiful screenshots of your code",
         "id": "adpyke.codesnap",
         "name": "CodeSnap"
       },
       {
-        "category": "Other",
         "description": "This unofficial extension integrates Draw.io into VS Code",
         "id": "hediet.vscode-drawio",
         "name": "Draw.io Integration"
       },
       {
-        "category": "Other",
         "description": "EditorConfig Support for Visual Studio Code",
         "id": "EditorConfig.EditorConfig",
         "name": "EditorConfig for VS Code"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "VSCode extension to format multiple files with right click context menu",
         "id": "lacroixdavid1.vscode-format-context-menu",
         "name": "Format in context menus"
       },
       {
-        "category": "Other",
         "description": "Geo Data Analytics tool for VSCode IDE with kepler.gl support to generate and view maps",
         "id": "RandomFractalsInc.geo-data-viewer",
         "name": "Geo Data Viewer"
       },
       {
-        "category": "Git / Gitlab",
         "description": "Pull Request and Issue Provider for GitHub",
         "id": "GitHub.vscode-pull-request-github",
         "name": "GitHub Pull Requests"
       },
       {
-        "category": "Git / Gitlab",
         "description": "Official GitLab-maintained extension for Visual Studio Code",
         "id": "GitLab.gitlab-workflow",
         "name": "GitLab Workflow"
       },
       {
-        "category": "Other",
         "description": "To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace",
         "id": "jasonlhy.hungry-delete",
         "name": "Hungry Delete"
       },
       {
-        "category": "Other",
         "description": "Launch a development local Server with live reload feature for static & dynamic pages",
         "id": "ritwickdey.LiveServer",
         "name": "Live Server"
       },
       {
-        "category": "Other",
         "description": "Real-time collaborative development from the comfort of your favorite tools",
         "id": "MS-vsliveshare.vsliveshare",
         "name": "Live Share"
       },
       {
-        "category": "Linters / Formatters / Sorters",
         "description": "Lua Language Server coded by Lua",
         "id": "sumneko.lua",
         "name": "Lua"
       },
       {
-        "category": "Other",
         "description": "vscode cursor move and select; jump, navigation, goto, acejump",
         "id": "metaseed.metago",
         "name": "MetaGo"
       },
       {
-        "category": "Databases",
         "description": "Connect to MongoDB and Atlas directly from your VS Code environment, navigate your databases and collections, inspect your schema and use playgrounds to prototype queries and aggregations",
         "id": "mongodb.mongodb-vscode",
         "name": "MongoDB for VS Code"
       },
       {
-        "category": "Other",
         "description": "OpenAPI editing, validation and preview in VS Code",
         "id": "42Crunch.vscode-openapi",
         "name": "OpenAPI (Swagger) Editor"
       },
       {
-        "category": "Other",
         "description": "Subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which",
         "id": "johnpapa.vscode-peacock",
         "name": "Peacock"
       },
       {
-        "category": "Other",
         "description": "Rich PlantUML support for Visual Studio Code",
         "id": "jebbs.plantuml",
         "name": "PlantUML"
       },
       {
-        "category": "Other",
         "description": "Easily switch between projects",
         "id": "alefragnani.project-manager",
         "name": "Project Manager"
       },
       {
-        "category": "Databases",
         "description": "Connecting users to many of the most commonly used databases. Welcome to database management done right",
         "id": "mtxr.sqltools",
         "name": "SQLTools"
       },
       {
-        "category": "Docker",
         "description": "Makes it easy to create, manage, and debug containerized applications",
         "id": "ms-azuretools.vscode-docker",
         "name": "Docker"
       },
       {
-        "category": "Other",
         "description": "Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun",
         "id": "idered.npm",
         "name": "NPM"
@@ -493,9 +443,11 @@
         "editor.codeActionsOnSave": {
           "source.organizeImports": "always"
         },
-        "editor.defaultFormatter": null,
-        "terminal.activateEnvironment": false
-      }
+        "editor.defaultFormatter": "ms-python.black-formatter"
+      },
+      "python.analysis.autoImportCompletions": true,
+      "python.analysis.typeCheckingMode": "strict",
+      "python.terminal.activateEnvironment": false
     }
   },
   {

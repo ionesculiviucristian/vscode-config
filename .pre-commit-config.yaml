@@ -1,7 +1,7 @@
 repos:
   - repo: local
     hooks:
-      - id: generate-readme
-        name: Generate README.md
-        entry: python generate_readme.py
+      - id: render-readme
+        name: Render README.md file
+        entry: node ./readme/render-readme.js
         language: system
