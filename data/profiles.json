@@ -48,7 +48,7 @@
         "settings": {
           "shellcheck.ignorePatterns": {
             "**/*.profile": true,
-            "**/*.env*": true
+            "**/*.env.*": true
           }
         }
       },
@@ -83,7 +83,12 @@
       {
         "description": "Support for dotenv file syntax",
         "id": "mikestead.dotenv",
-        "name": "DotENV"
+        "name": "DotENV",
+        "settings": {
+          "files.associations": {
+            "*.env.*": "dotenv"
+          }
+        }
       },
       {
         "description": "Integrates ESLint JavaScript into VS Code",

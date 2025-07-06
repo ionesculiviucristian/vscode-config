@@ -80,6 +80,14 @@ python manage_profiles.py --uninstall
 
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv): Support for dotenv file syntax
 
+```json
+{
+  "files.associations": {
+    "*.env.*": "dotenv"
+  }
+}
+```
+
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics
 
 ```json
@@ -155,7 +163,7 @@ python manage_profiles.py --uninstall
 {
   "shellcheck.ignorePatterns": {
     "**/*.profile": true,
-    "**/*.env*": true
+    "**/*.env.*": true
   }
 }
 ```
