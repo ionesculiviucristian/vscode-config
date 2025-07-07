@@ -136,7 +136,7 @@ class Manager:
         self.save_profile_settings(profile, profile_settings)
 
     def install(self):
-        with open("profiles.json", "r") as f1:
+        with open("./data/profiles.json", "r") as f1:
             profiles = json.load(f1)
 
         primary_profile = next(p for p in profiles if "primary" in p)
@@ -163,7 +163,7 @@ class Manager:
         debug(f"Removed profile {profile['name']}")
 
     def uninstall(self):
-        with open("profiles.json", "r") as f:
+        with open("./data/profiles.json", "r") as f:
             profiles = json.load(f)
 
         for profile in profiles:

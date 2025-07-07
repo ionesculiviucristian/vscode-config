@@ -2,6 +2,21 @@
   {
     "extensions": [
       {
+        "description": "To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace",
+        "id": "jasonlhy.hungry-delete",
+        "name": "Hungry Delete"
+      },
+      {
+        "description": "Pull Request and Issue Provider for GitHub",
+        "id": "GitHub.vscode-pull-request-github",
+        "name": "GitHub Pull Requests"
+      },
+      {
+        "description": "Official GitLab-maintained extension for Visual Studio Code",
+        "id": "GitLab.gitlab-workflow",
+        "name": "GitLab Workflow"
+      },
+      {
         "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
         "id": "aaron-bond.better-comments",
         "name": "Better Comments"
@@ -226,7 +241,7 @@
         "name": "Gremlins tracker for Visual Studio Code"
       }
     ],
-    "id": "032cba3e",
+    "id": "enhanced",
     "name": "Enhanced",
     "primary": true,
     "settings": {
@@ -247,122 +262,6 @@
       "typescript.preferences.importModuleSpecifier": "non-relative",
       "workbench.startupEditor": "none"
     }
-  },
-  {
-    "extensions": [
-      {
-        "description": "Ansible language support",
-        "id": "redhat.ansible",
-        "name": "Ansible"
-      },
-      {
-        "description": "Mark lines and jump to them",
-        "id": "alefragnani.Bookmarks",
-        "name": "Bookmarks"
-      },
-      {
-        "description": " Take beautiful screenshots of your code",
-        "id": "adpyke.codesnap",
-        "name": "CodeSnap"
-      },
-      {
-        "description": "This unofficial extension integrates Draw.io into VS Code",
-        "id": "hediet.vscode-drawio",
-        "name": "Draw.io Integration"
-      },
-      {
-        "description": "EditorConfig Support for Visual Studio Code",
-        "id": "EditorConfig.EditorConfig",
-        "name": "EditorConfig for VS Code"
-      },
-      {
-        "description": "VSCode extension to format multiple files with right click context menu",
-        "id": "lacroixdavid1.vscode-format-context-menu",
-        "name": "Format in context menus"
-      },
-      {
-        "description": "Geo Data Analytics tool for VSCode IDE with kepler.gl support to generate and view maps",
-        "id": "RandomFractalsInc.geo-data-viewer",
-        "name": "Geo Data Viewer"
-      },
-      {
-        "description": "Pull Request and Issue Provider for GitHub",
-        "id": "GitHub.vscode-pull-request-github",
-        "name": "GitHub Pull Requests"
-      },
-      {
-        "description": "Official GitLab-maintained extension for Visual Studio Code",
-        "id": "GitLab.gitlab-workflow",
-        "name": "GitLab Workflow"
-      },
-      {
-        "description": "To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace",
-        "id": "jasonlhy.hungry-delete",
-        "name": "Hungry Delete"
-      },
-      {
-        "description": "Launch a development local Server with live reload feature for static & dynamic pages",
-        "id": "ritwickdey.LiveServer",
-        "name": "Live Server"
-      },
-      {
-        "description": "Real-time collaborative development from the comfort of your favorite tools",
-        "id": "MS-vsliveshare.vsliveshare",
-        "name": "Live Share"
-      },
-      {
-        "description": "Lua Language Server coded by Lua",
-        "id": "sumneko.lua",
-        "name": "Lua"
-      },
-      {
-        "description": "vscode cursor move and select; jump, navigation, goto, acejump",
-        "id": "metaseed.metago",
-        "name": "MetaGo"
-      },
-      {
-        "description": "Connect to MongoDB and Atlas directly from your VS Code environment, navigate your databases and collections, inspect your schema and use playgrounds to prototype queries and aggregations",
-        "id": "mongodb.mongodb-vscode",
-        "name": "MongoDB for VS Code"
-      },
-      {
-        "description": "OpenAPI editing, validation and preview in VS Code",
-        "id": "42Crunch.vscode-openapi",
-        "name": "OpenAPI (Swagger) Editor"
-      },
-      {
-        "description": "Subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which",
-        "id": "johnpapa.vscode-peacock",
-        "name": "Peacock"
-      },
-      {
-        "description": "Rich PlantUML support for Visual Studio Code",
-        "id": "jebbs.plantuml",
-        "name": "PlantUML"
-      },
-      {
-        "description": "Easily switch between projects",
-        "id": "alefragnani.project-manager",
-        "name": "Project Manager"
-      },
-      {
-        "description": "Connecting users to many of the most commonly used databases. Welcome to database management done right",
-        "id": "mtxr.sqltools",
-        "name": "SQLTools"
-      },
-      {
-        "description": "Makes it easy to create, manage, and debug containerized applications",
-        "id": "ms-azuretools.vscode-docker",
-        "name": "Docker"
-      },
-      {
-        "description": "Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun",
-        "id": "idered.npm",
-        "name": "NPM"
-      }
-    ],
-    "id": "d9b82aed",
-    "name": "Experimental"
   },
   {
     "extensions": [
@@ -392,7 +291,7 @@
         }
       }
     ],
-    "id": "e01d32a2",
+    "id": "php",
     "name": "PHP",
     "settings": {
       "[php]": {
@@ -442,7 +341,7 @@
         "name": "Python"
       }
     ],
-    "id": "4edf6258",
+    "id": "python",
     "name": "Python",
     "settings": {
       "[python]": {
@@ -464,7 +363,7 @@
         "name": "Vue - Official"
       }
     ],
-    "id": "fa2f2c62",
+    "id": "vue",
     "name": "Vue",
     "settings": {
       "[vue]": {
@@ -482,7 +381,7 @@
         "name": "ES7+ React/Redux/React-Native snippets"
       }
     ],
-    "id": "e493ba8f",
+    "id": "react",
     "name": "React"
   }
 ]
