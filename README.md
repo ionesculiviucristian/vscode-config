@@ -4,7 +4,7 @@
 - [List of available profiles](#list-of-available-profiles)
 
   - [Enhanced](#enhanced)
-  - [Laravel & Vue](#laravel-vue)
+  - [Laravel with Vue](#laravel-with-vue)
   - [PHP](#php)
   - [Python](#python)
   - [React](#react)
@@ -212,7 +212,7 @@ python manage_profiles.py --uninstall
 }
 ```
 
-### Laravel & Vue
+### Laravel with Vue
 
 - [Laravel](https://marketplace.visualstudio.com/items?itemName=laravel.vscode-laravel): Official VS Code extension for Laravel
 
