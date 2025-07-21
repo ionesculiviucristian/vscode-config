@@ -283,12 +283,7 @@
       {
         "description": "PHP code intelligence for Visual Studio Code",
         "id": "bmewburn.vscode-intelephense-client",
-        "name": "PHP Intelephense",
-        "settings": {
-          "[php]": {
-            "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-          }
-        }
+        "name": "PHP Intelephense"
       }
     ],
     "id": "php",
@@ -298,6 +293,18 @@
         "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
       }
     }
+  },
+  {
+    "extends": ["php", "vue"],
+    "extensions": [
+      {
+        "description": "Official VS Code extension for Laravel",
+        "id": "laravel.vscode-laravel",
+        "name": "Laravel"
+      }
+    ],
+    "id": "laravel-vue",
+    "name": "Laravel & Vue"
   },
   {
     "extensions": [

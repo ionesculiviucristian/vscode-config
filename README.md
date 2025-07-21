@@ -4,7 +4,7 @@
 - [List of available profiles](#list-of-available-profiles)
 
   - [Enhanced](#enhanced)
-  - [Experimental](#experimental)
+  - [Laravel & Vue](#laravel-vue)
   - [PHP](#php)
   - [Python](#python)
   - [React](#react)
@@ -120,7 +120,13 @@ python manage_profiles.py --uninstall
 
 - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat): AI chat features powered by Copilot
 
+- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github): Pull Request and Issue Provider for GitHub
+
+- [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow): Official GitLab-maintained extension for Visual Studio Code
+
 - [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins): Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins
+
+- [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete): To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace
 
 - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): Display import/require package size in the editor
 
@@ -206,51 +212,9 @@ python manage_profiles.py --uninstall
 }
 ```
 
-### Experimental
+### Laravel & Vue
 
-- [Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible): Ansible language support
-
-- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks): Mark lines and jump to them
-
-- [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap):  Take beautiful screenshots of your code
-
-- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker): Makes it easy to create, manage, and debug containerized applications
-
-- [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio): This unofficial extension integrates Draw.io into VS Code
-
-- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): EditorConfig Support for Visual Studio Code
-
-- [Format in context menus](https://marketplace.visualstudio.com/items?itemName=lacroixdavid1.vscode-format-context-menu): VSCode extension to format multiple files with right click context menu
-
-- [Geo Data Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.geo-data-viewer): Geo Data Analytics tool for VSCode IDE with kepler.gl support to generate and view maps
-
-- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github): Pull Request and Issue Provider for GitHub
-
-- [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow): Official GitLab-maintained extension for Visual Studio Code
-
-- [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete): To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace
-
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): Launch a development local Server with live reload feature for static & dynamic pages
-
-- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Real-time collaborative development from the comfort of your favorite tools
-
-- [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua): Lua Language Server coded by Lua
-
-- [MetaGo](https://marketplace.visualstudio.com/items?itemName=metaseed.metago): vscode cursor move and select; jump, navigation, goto, acejump
-
-- [MongoDB for VS Code](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode): Connect to MongoDB and Atlas directly from your VS Code environment, navigate your databases and collections, inspect your schema and use playgrounds to prototype queries and aggregations
-
-- [NPM](https://marketplace.visualstudio.com/items?itemName=idered.npm): Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun
-
-- [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi): OpenAPI editing, validation and preview in VS Code
-
-- [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock): Subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which
-
-- [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml): Rich PlantUML support for Visual Studio Code
-
-- [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager): Easily switch between projects
-
-- [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): Connecting users to many of the most commonly used databases. Welcome to database management done right
+- [Laravel](https://marketplace.visualstudio.com/items?itemName=laravel.vscode-laravel): Official VS Code extension for Laravel
 
 ### PHP
 
@@ -269,14 +233,6 @@ python manage_profiles.py --uninstall
 - [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug): Debug support for PHP with Xdebug
 
 - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client): PHP code intelligence for Visual Studio Code
-
-```json
-{
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  }
-}
-```
 
 ### Python
 
@@ -355,7 +311,7 @@ python manage_profiles.py --uninstall
 Install pre commit hooks
 
 ```bash
-pip install pre-commit
+pipx install pre-commit
 pre-commit install
 ```
 
