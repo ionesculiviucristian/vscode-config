@@ -298,6 +298,11 @@
     "extends": ["php", "vue"],
     "extensions": [
       {
+        "description": "Intelligent Tailwind CSS tooling for VS Code",
+        "id": "bradlc.vscode-tailwindcss",
+        "name": "Tailwind CSS IntelliSense"
+      },
+      {
         "description": "Official VS Code extension for Laravel",
         "id": "laravel.vscode-laravel",
         "name": "Laravel"
