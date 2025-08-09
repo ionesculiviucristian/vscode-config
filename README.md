@@ -7,7 +7,6 @@
 - [About this project](#about-this-project)
 - [Installation](#installation)
 - [List of available profiles](#list-of-available-profiles)
-
   - [Enhanced](#enhanced)
   - [Laravel with Vue](#laravel-with-vue)
   - [PHP](#php)
@@ -322,8 +321,6 @@ python manage_profiles.py --uninstall
 - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar): Language Support for Vue
 
 ## Developing
-
-Install pre commit hooks
 
 ```bash
 pipx install pre-commit
