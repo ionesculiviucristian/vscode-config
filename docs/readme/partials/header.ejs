@@ -2,6 +2,8 @@
 
 ![Preview 1](./assets/preview.png)
 
+## Table of Contents
+
 - [About this project](#about-this-project)
 - [Installation](#installation)
 - [List of available profiles](#list-of-available-profiles)
