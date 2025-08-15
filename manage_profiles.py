@@ -83,18 +83,18 @@ class Manager:
             data["userDataProfiles"] = [userDataProfile]
 
         with open(self.storage_file_path, "w") as f:
+            debug(f"Creating {userDataProfile['name']} profile")
             json.dump(data, f, indent=2)
-        debug(f"Created profile {userDataProfile['name']}")
 
     def install_profile_extension(self, profile: Profile, extension: Extension):
         try:
             version = f"@{extension['version']}" if "version" in extension else ""
+            debug(f"Installing {extension['id']}{version} extension for {profile['name']} profile")
             subprocess.run(
                 f"code --profile '{profile['name']}' --install-extension '{extension['id']}{version}' >/dev/null",
                 shell=True,
                 check=True,
             )
-            debug(f"Installed extension {extension['id']} for profile {profile['name']}")
         except subprocess.CalledProcessError as e:
             raise Exception(
                 f"An error occurred while installing extension {extension['id']} for profile {profile['name']}: {e}"
@@ -111,8 +111,8 @@ class Manager:
             raise Exception(f"Failed to compile settings for profile {profile['name']}: {result.stderr.strip()}")
 
         with open(f"{self.profiles_dir}/{profile['id']}/settings.json", "w") as f:
+            debug(f"Saving settings for {profile['name']} profile")
             json.dump(json.loads(result.stdout), f, indent=2)
-        debug(f"Saved settings for profile {profile['name']}")
 
     def compile_profile_settings(self, profile: Profile):
         settings: List[Settings] = []
@@ -148,7 +148,7 @@ class Manager:
             for extended in profile["extends"]:
                 extended_profile = next(p for p in self.profiles if p["id"] == extended)
                 if not extended_profile:
-                    debug(f"Extended profile {extended} not found")
+                    debug(f"{profile['name']} extends a missing profile: {extended}")
                     continue
                 if "settings" in extended_profile:
                     profile_settings.append(extended_profile["settings"])
@@ -177,8 +177,8 @@ class Manager:
 
         profile_path = os.path.join(self.profiles_dir, profile["id"])
         if os.path.exists(profile_path):
+            debug(f"Removing {profile['name']} profile")
             shutil.rmtree(profile_path)
-        debug(f"Removed profile {profile['name']}")
 
     def uninstall(self):
         for profile in self.profiles:
