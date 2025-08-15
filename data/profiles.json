@@ -194,11 +194,6 @@
         }
       },
       {
-        "description": "Code snippets for JavaScript in ES6 syntax",
-        "id": "xabikos.JavaScriptSnippets",
-        "name": "JavaScript (ES6) code snippets"
-      },
-      {
         "description": "Soothing pastel theme for VSCode",
         "id": "Catppuccin.catppuccin-vsc",
         "name": "Catppuccin for VSCode",
@@ -274,11 +269,6 @@
         "description": "Debug support for PHP with Xdebug",
         "id": "xdebug.php-debug",
         "name": "PHP Debug"
-      },
-      {
-        "description": "A fullset of snippets for PHP devs to boost coding productivity",
-        "id": "hakcorp.php-awesome-snippets",
-        "name": "PHP Awesome Snippets"
       },
       {
         "description": "PHP code intelligence for Visual Studio Code",
@@ -404,16 +394,5 @@
       },
       "extensions.autoUpdateExceptions": ["Vue.volar"]
     }
-  },
-  {
-    "extensions": [
-      {
-        "description": "Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier",
-        "id": "dsznajder.es7-react-js-snippets",
-        "name": "ES7+ React/Redux/React-Native snippets"
-      }
-    ],
-    "id": "react",
-    "name": "React"
   }
 ]
