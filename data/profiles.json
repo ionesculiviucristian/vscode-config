@@ -388,6 +388,26 @@
   {
     "extensions": [
       {
+        "description": "Language Support for Vue",
+        "id": "Vue.volar",
+        "name": "Vue - Official"
+      }
+    ],
+    "id": "vue-legacy",
+    "name": "Vue (legacy)",
+    "version": "3.0.5",
+    "settings": {
+      "[vue]": {
+        "editor.codeActionsOnSave": {
+          "source.addMissingImports": "never"
+        }
+      },
+      "extensions.autoUpdateExceptions": ["Vue.volar"]
+    }
+  },
+  {
+    "extensions": [
+      {
         "description": "Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier",
         "id": "dsznajder.es7-react-js-snippets",
         "name": "ES7+ React/Redux/React-Native snippets"

@@ -13,6 +13,7 @@
   - [Python](#python)
   - [React](#react)
   - [Vue](#vue)
+  - [Vue (legacy)](#vue-legacy)
 - [Developing](#developing)
 
 ## About this project
@@ -315,6 +316,23 @@ python manage_profiles.py --uninstall
       "source.addMissingImports": "never"
     }
   }
+}
+```
+
+- [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar): Language Support for Vue
+
+### Vue (legacy)
+
+```json
+{
+  "[vue]": {
+    "editor.codeActionsOnSave": {
+      "source.addMissingImports": "never"
+    }
+  },
+  "extensions.autoUpdateExceptions": [
+    "Vue.volar"
+  ]
 }
 ```
 
