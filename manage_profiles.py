@@ -17,20 +17,21 @@ Settings = Dict[str, Union[str, int, bool, "Settings"]]
 
 
 class Extension(TypedDict):
-    id: str
     category: str
-    name: str
     description: str
+    id: str
+    name: str
     settings: Settings
+    version: Optional[str]
 
 
 class Profile(TypedDict):
-    id: str
-    primary: bool
-    name: str
-    settings: Settings
     extends: Optional[List[str]]
     extensions: List[Extension]
+    id: str
+    name: str
+    primary: bool
+    settings: Settings
 
 
 class Manager:
@@ -87,8 +88,9 @@ class Manager:
 
     def install_profile_extension(self, profile: Profile, extension: Extension):
         try:
+            version = f"@{extension['version']}" if "version" in extension else ""
             subprocess.run(
-                f"code --profile '{profile['name']}' --install-extension '{extension['id']}' > /dev/null 2>&1",
+                f"code --profile '{profile['name']}' --install-extension '{extension['id']}{version}' >/dev/null",
                 shell=True,
                 check=True,
             )
