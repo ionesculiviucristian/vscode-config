@@ -146,6 +146,8 @@ python manage_profiles.py --uninstall
 
 - [JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster): Boost your productivity with advanced JavaScript/TypeScript refactorings and commands
 
+- [Learn Vim](https://marketplace.visualstudio.com/items?itemName=vintharas.learn-vim): Learn Vim right within your favorite editor
+
 - [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua): Lua Language Server coded by Lua
 
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
@@ -213,6 +215,8 @@ python manage_profiles.py --uninstall
 - [Text Power Tools](https://marketplace.visualstudio.com/items?itemName=qcz.text-power-tools): All-in-one solution with 240+ commands for text manipulation: filter lines (grep), remove lines, insert number sequences and GUIDs, sorting, change case, converting numbers, generating fake data and more
 
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree): Show TODO, FIXME, etc. comment tags in a tree view
+
+- [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim): Vim emulation for Visual Studio Code
 
 - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml): XML Language Support by Red Hat
 
