@@ -234,6 +234,21 @@
         "description": "Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins",
         "id": "nhoizey.gremlins",
         "name": "Gremlins tracker for Visual Studio Code"
+      },
+      {
+        "description": "A Lua code formatter",
+        "id": "JohnnyMorganz.stylua",
+        "name": "StyLua",
+        "settings": {
+          "[lua]": {
+            "editor.defaultFormatter": "JohnnyMorganz.stylua"
+          }
+        }
+      },
+      {
+        "description": "Lua Language Server coded by Lua",
+        "id": "sumneko.lua",
+        "name": "Lua"
       }
     ],
     "id": "enhanced",

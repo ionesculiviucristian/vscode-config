@@ -146,6 +146,8 @@ python manage_profiles.py --uninstall
 
 - [JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster): Boost your productivity with advanced JavaScript/TypeScript refactorings and commands
 
+- [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua): Lua Language Server coded by Lua
+
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Markdown linting and style checking for Visual Studio Code
@@ -195,6 +197,16 @@ python manage_profiles.py --uninstall
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false
+}
+```
+
+- [StyLua](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua): A Lua code formatter
+
+```json
+{
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  }
 }
 ```
 
