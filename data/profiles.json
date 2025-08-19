@@ -62,8 +62,8 @@
         "name": "ShellCheck",
         "settings": {
           "shellcheck.ignorePatterns": {
-            "**/*.profile": true,
-            "**/*.env.*": true
+            "**/*.env.*": true,
+            "**/*.profile": true
           }
         }
       },
@@ -265,6 +265,9 @@
     "name": "Enhanced",
     "primary": true,
     "settings": {
+      "[shellscript]": {
+        "editor.rulers": [80]
+      },
       "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit"
       },
@@ -410,7 +413,6 @@
     ],
     "id": "vue-legacy",
     "name": "Vue (legacy)",
-    "version": "3.0.5",
     "settings": {
       "[vue]": {
         "editor.codeActionsOnSave": {
@@ -418,6 +420,7 @@
         }
       },
       "extensions.autoUpdateExceptions": ["Vue.volar"]
-    }
+    },
+    "version": "3.0.5"
   }
 ]

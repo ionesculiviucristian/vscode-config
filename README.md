@@ -39,6 +39,11 @@ python manage_profiles.py --uninstall
 
 ```json
 {
+  "[shellscript]": {
+    "editor.rulers": [
+      80
+    ]
+  },
   "editor.codeActionsOnSave": {
     "source.addMissingImports": "explicit"
   },
@@ -182,8 +187,8 @@ python manage_profiles.py --uninstall
 ```json
 {
   "shellcheck.ignorePatterns": {
-    "**/*.profile": true,
-    "**/*.env.*": true
+    "**/*.env.*": true,
+    "**/*.profile": true
   }
 }
 ```
