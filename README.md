@@ -105,6 +105,8 @@ python manage_profiles.py --uninstall
 }
 ```
 
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): EditorConfig Support for Visual Studio Code
+
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics
 
 ```json

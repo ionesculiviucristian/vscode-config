@@ -259,6 +259,11 @@
         "description": "Learn Vim right within your favorite editor",
         "id": "vintharas.learn-vim",
         "name": "Learn Vim"
+      },
+      {
+        "description": "EditorConfig Support for Visual Studio Code",
+        "id": "EditorConfig.EditorConfig",
+        "name": "EditorConfig for VS Code"
       }
     ],
     "id": "enhanced",
