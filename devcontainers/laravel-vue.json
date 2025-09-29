@@ -1,0 +1,119 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "laravel.vscode-laravel",
+        "jasonlhy.hungry-delete",
+        "GitHub.vscode-pull-request-github",
+        "GitLab.gitlab-workflow",
+        "aaron-bond.better-comments",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "stylelint.vscode-stylelint",
+        "Gruntfuggly.todo-tree",
+        "redhat.vscode-xml",
+        "timonwong.shellcheck",
+        "waderyan.gitblame",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "streetsidesoftware.code-spell-checker",
+        "qcz.text-power-tools",
+        "mikestead.dotenv",
+        "dbaeumer.vscode-eslint",
+        "tamasfe.even-better-toml",
+        "DavidAnson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "richie5um2.vscode-sort-json",
+        "Tyriar.sort-lines",
+        "PascalReitermann93.vscode-yaml-sort",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one",
+        "christian-kohler.path-intellisense",
+        "yoavbls.pretty-ts-errors",
+        "Natizyskunk.sftp",
+        "redhat.vscode-yaml",
+        "Catppuccin.catppuccin-vsc",
+        "Catppuccin.catppuccin-vsc-icons",
+        "wix.vscode-import-cost",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "sburg.vscode-javascript-booster",
+        "nhoizey.gremlins",
+        "JohnnyMorganz.stylua",
+        "sumneko.lua",
+        "vscodevim.vim",
+        "vintharas.learn-vim",
+        "EditorConfig.EditorConfig",
+        "DEVSENSE.composer-php-vscode",
+        "xdebug.php-debug",
+        "bmewburn.vscode-intelephense-client",
+        "Vue.volar"
+      ],
+      "settings": {
+        "[shellscript]": {
+          "editor.rulers": [
+            80
+          ]
+        },
+        "editor.codeActionsOnSave": {
+          "source.addMissingImports": "explicit",
+          "source.fixAll.eslint": "explicit"
+        },
+        "editor.fontFamily": "'JetBrainsMonoNL Nerd Font Mono', 'monospace', monospace",
+        "editor.fontSize": 18,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.linkedEditing": true,
+        "editor.stickyScroll.enabled": false,
+        "files.autoSave": "afterDelay",
+        "files.insertFinalNewline": true,
+        "git.enableSmartCommit": true,
+        "git.openRepositoryInParentFolders": "always",
+        "javascript.preferences.importModuleSpecifier": "non-relative",
+        "typescript.preferences.importModuleSpecifier": "non-relative",
+        "workbench.startupEditor": "none",
+        "css.validate": false,
+        "less.validate": false,
+        "scss.validate": false,
+        "shellcheck.ignorePatterns": {
+          "**/*.env.*": true,
+          "**/*.profile": true
+        },
+        "cSpell.diagnosticLevel": "Hint",
+        "files.associations": {
+          "*.env.*": "dotenv"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "vscode-yaml-sort.forceQuotes": true,
+        "vscode-yaml-sort.quotingType": "\"",
+        "vscode-yaml-sort.sortArrays": true,
+        "errorLens.excludeBySource": [
+          "cSpell"
+        ],
+        "javascript.suggest.paths": false,
+        "typescript.suggest.paths": false,
+        "redhat.telemetry.enabled": false,
+        "editor.semanticHighlighting.enabled": true,
+        "gopls": {
+          "ui.semanticTokens": true
+        },
+        "terminal.integrated.minimumContrastRatio": 1,
+        "window.titleBarStyle": "custom",
+        "workbench.colorTheme": "Catppuccin Mocha",
+        "workbench.iconTheme": "catppuccin-mocha",
+        "[lua]": {
+          "editor.defaultFormatter": "JohnnyMorganz.stylua"
+        },
+        "[php]": {
+          "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+        },
+        "[vue]": {
+          "editor.codeActionsOnSave": {
+            "source.addMissingImports": "never"
+          }
+        }
+      }
+    }
+  }
+}

@@ -34,6 +34,19 @@ class Profile(TypedDict):
     settings: Settings
 
 
+class DevContainerConfigCustomizationsVSCode(TypedDict):
+    extensions: List[str]
+    settings: Settings
+
+
+class DevContainerConfigCustomizations(TypedDict):
+    vscode: DevContainerConfigCustomizationsVSCode
+
+
+class DevContainerConfig(TypedDict):
+    customizations: DevContainerConfigCustomizations
+
+
 class Manager:
     primary_profile_settings: List[Settings]
     primary_profile: Profile
@@ -59,7 +72,7 @@ class Manager:
 
         self.primary_profile = next(p for p in self.profiles if "primary" in p)
 
-        self.primary_profile_settings = self.compile_profile_settings(self.primary_profile)
+        self.primary_profile_settings = self.merge_profile_settings(self.primary_profile)
 
     def profile_exists(self, profile: Profile):
         with open(self.storage_file_path, "r") as f:
@@ -100,7 +113,7 @@ class Manager:
                 f"An error occurred while installing extension {extension['id']} for profile {profile['name']}: {e}"
             )
 
-    def save_profile_settings(self, profile: Profile, settings: List[Settings]):
+    def compile_profile_settings(self, profile: Profile, settings: List[Settings]):
         raw_settings = json.dumps(settings)
 
         result = subprocess.run(
@@ -110,11 +123,16 @@ class Manager:
         if result.returncode != 0:
             raise Exception(f"Failed to compile settings for profile {profile['name']}: {result.stderr.strip()}")
 
+        return result.stdout
+
+    def save_profile_settings(self, profile: Profile, settings: List[Settings]):
+        compiled_settings = self.compile_profile_settings(profile, settings)
+
         with open(f"{self.profiles_dir}/{profile['id']}/settings.json", "w") as f:
             debug(f"Saving settings for {profile['name']} profile")
-            json.dump(json.loads(result.stdout), f, indent=2)
+            json.dump(json.loads(compiled_settings), f, indent=2)
 
-    def compile_profile_settings(self, profile: Profile):
+    def merge_profile_settings(self, profile: Profile):
         settings: List[Settings] = []
 
         if "settings" in profile:
@@ -139,7 +157,7 @@ class Manager:
         for extension in profile["extensions"]:
             self.install_profile_extension(profile, extension)
 
-        profile_settings = self.compile_profile_settings(profile)
+        profile_settings = self.merge_profile_settings(profile)
 
         if primary_profile:
             profile_settings += self.primary_profile_settings
@@ -184,11 +202,50 @@ class Manager:
         for profile in self.profiles:
             self.uninstall_profile(profile)
 
+    def save_devcontainer_profile(self, profile: Profile, primary_profile: Optional[Profile] = None):
+        data: DevContainerConfig = {"customizations": {"vscode": {"extensions": [], "settings": {}}}}
+
+        settings = self.merge_profile_settings(profile)
+
+        for extension in profile["extensions"]:
+            data["customizations"]["vscode"]["extensions"].append(extension["id"])
+
+        if primary_profile:
+            settings += self.primary_profile_settings
+            for extension in primary_profile["extensions"]:
+                data["customizations"]["vscode"]["extensions"].append(extension["id"])
+
+        if "extends" in profile and profile["extends"]:
+            for extended in profile["extends"]:
+                extended_profile = next(p for p in self.profiles if p["id"] == extended)
+                if not extended_profile:
+                    debug(f"{profile['name']} extends a missing profile: {extended}")
+                    continue
+                if "settings" in extended_profile:
+                    settings.append(extended_profile["settings"])
+                for extended_extension in extended_profile["extensions"]:
+                    data["customizations"]["vscode"]["extensions"].append(extended_extension["id"])
+                    if "settings" in extended_extension:
+                        settings.append(extended_extension["settings"])
+
+        data["customizations"]["vscode"]["settings"] = json.loads(self.compile_profile_settings(profile, settings))
+
+        with open(f"./devcontainers/{profile['id']}.json", "w") as f:
+            json.dump(data, f, indent=2)
+
+    def generate_devcontainer_profiles(self):
+        self.save_devcontainer_profile(self.primary_profile)
+
+        other_profiles = [p for p in self.profiles if "primary" not in p]
+        for profile in other_profiles:
+            self.save_devcontainer_profile(profile, self.primary_profile)
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Manage VSCode profiles")
     parser.add_argument("--install", action="store_true", help="Install all profiles")
     parser.add_argument("--uninstall", action="store_true", help="Uninstall all profiles")
+    parser.add_argument("--devcontainers", action="store_true", help="Generate devcontainer profiles")
     args = parser.parse_args()
 
     manager = Manager()
@@ -197,8 +254,10 @@ def main() -> None:
         manager.install()
     elif args.uninstall:
         manager.uninstall()
+    elif args.devcontainers:
+        manager.generate_devcontainer_profiles()
     else:
-        print("No action specified. Use --install or --uninstall")
+        print("No action specified. Use --install, --uninstall or --devcontainers")
 
 
 if __name__ == "__main__":
