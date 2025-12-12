@@ -1,0 +1,15 @@
+name: ollama
+version: 1.0.0
+schema: v1
+models:
+  - name: DeepSeek Coder 16B (Local)
+    provider: ollama
+    model: deepseek-coder-v2:16b
+    apiBase: http://localhost:11434
+    defaultCompletionOptions:
+      temperature: 0.2
+      maxTokens: 2048
+    chatOptions:
+      baseSystemMessage: |
+        You are an expert software engineer. Provide concise and accurate code completions and fixes. 
+        Always output code inside markdown blocks.

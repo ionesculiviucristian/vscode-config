@@ -29,6 +29,9 @@ Whether you're working with PHP, JavaScript, Python, or modern front-end framewo
 # Install profiles
 python manage_profiles.py --install
 
+# Configure extensions
+./configure.sh
+
 # Uninstall profiles
 python manage_profiles.py --uninstall
 ```
@@ -94,6 +97,8 @@ python manage_profiles.py --uninstall
   "cSpell.diagnosticLevel": "Hint"
 }
 ```
+
+- [Continue - open-source AI code agent](https://marketplace.visualstudio.com/items?itemName=Continue.continue): The leading open-source AI code agent
 
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv): Support for dotenv file syntax
 

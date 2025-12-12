@@ -264,6 +264,11 @@
         "description": "EditorConfig Support for Visual Studio Code",
         "id": "EditorConfig.EditorConfig",
         "name": "EditorConfig for VS Code"
+      },
+      {
+        "description": "The leading open-source AI code agent",
+        "id": "Continue.continue",
+        "name": "Continue - open-source AI code agent"
       }
     ],
     "id": "enhanced",
