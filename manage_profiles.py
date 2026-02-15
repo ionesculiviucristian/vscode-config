@@ -1,6 +1,8 @@
 import argparse
+import importlib.util
 import json
 import os
+import platform
 import shutil
 import subprocess
 from typing import Dict, List, Optional, TypedDict, Union
@@ -55,9 +57,12 @@ class Manager:
     storage_file_path: str
 
     def __init__(self):
-        code_path = os.path.join(os.path.expanduser("~"), ".config", "Code", "User")
-        if not code_path:
-            raise Exception("Code is not installed")
+        if platform.system() == "Windows":
+            code_path = os.path.join(os.environ["APPDATA"], "Code", "User")
+        else:
+            code_path = os.path.join(os.path.expanduser("~"), ".config", "Code", "User")
+        if not os.path.exists(code_path):
+            raise Exception("VS Code configuration directory not found")
 
         self.profiles_dir = os.path.join(code_path, "profiles")
         if not os.path.exists(self.profiles_dir):
@@ -74,7 +79,7 @@ class Manager:
 
         self.primary_profile_settings = self.merge_profile_settings(self.primary_profile)
 
-    def profile_exists(self, profile: Profile):
+    def profile_exists(self, profile: Profile) -> bool:
         with open(self.storage_file_path, "r") as f:
             data = json.load(f)
 
@@ -82,7 +87,7 @@ class Manager:
 
         return any(created_profile.get("location") == profile["id"] for created_profile in created_profiles)
 
-    def create_profile(self, profile: Profile):
+    def create_profile(self, profile: Profile) -> None:
         os.makedirs(os.path.join(self.profiles_dir, profile["id"]), exist_ok=True)
 
         with open(self.storage_file_path, "r") as f:
@@ -99,13 +104,13 @@ class Manager:
             debug(f"Creating {userDataProfile['name']} profile")
             json.dump(data, f, indent=2)
 
-    def install_profile_extension(self, profile: Profile, extension: Extension):
+    def install_profile_extension(self, profile: Profile, extension: Extension) -> None:
         try:
             version = f"@{extension['version']}" if "version" in extension else ""
             debug(f"Installing {extension['id']}{version} extension for {profile['name']} profile")
             subprocess.run(
-                f"code --profile '{profile['name']}' --install-extension '{extension['id']}{version}' >/dev/null",
-                shell=True,
+                ["code", "--profile", profile["name"], "--install-extension", f"{extension['id']}{version}"],
+                stdout=subprocess.DEVNULL,
                 check=True,
             )
         except subprocess.CalledProcessError as e:
@@ -113,26 +118,31 @@ class Manager:
                 f"An error occurred while installing extension {extension['id']} for profile {profile['name']}: {e}"
             )
 
-    def compile_profile_settings(self, profile: Profile, settings: List[Settings]):
-        raw_settings = json.dumps(settings)
+    @staticmethod
+    def deep_merge(base: Settings, override: Settings) -> Settings:
+        result = base.copy()
+        for key, value in override.items():
+            existing = result.get(key)
+            if isinstance(existing, dict) and isinstance(value, dict):
+                result[key] = Manager.deep_merge(existing, value)
+            else:
+                result[key] = value
+        return result
 
-        result = subprocess.run(
-            ["jq", "reduce .[] as $item ({}; . * $item)"], input=raw_settings, capture_output=True, text=True
-        )
+    def compile_profile_settings(self, profile: Profile, settings: List[Settings]) -> str:
+        result: Settings = {}
+        for item in settings:
+            result = self.deep_merge(result, item)
+        return json.dumps(result)
 
-        if result.returncode != 0:
-            raise Exception(f"Failed to compile settings for profile {profile['name']}: {result.stderr.strip()}")
-
-        return result.stdout
-
-    def save_profile_settings(self, profile: Profile, settings: List[Settings]):
+    def save_profile_settings(self, profile: Profile, settings: List[Settings]) -> None:
         compiled_settings = self.compile_profile_settings(profile, settings)
 
         with open(f"{self.profiles_dir}/{profile['id']}/settings.json", "w") as f:
             debug(f"Saving settings for {profile['name']} profile")
             json.dump(json.loads(compiled_settings), f, indent=2)
 
-    def merge_profile_settings(self, profile: Profile):
+    def merge_profile_settings(self, profile: Profile) -> List[Settings]:
         settings: List[Settings] = []
 
         if "settings" in profile:
@@ -144,7 +154,7 @@ class Manager:
 
         return settings
 
-    def install_profile(self, profile: Profile, primary_profile: Optional[Profile] = None):
+    def install_profile(self, profile: Profile, primary_profile: Optional[Profile] = None) -> None:
         if not self.profile_exists(profile):
             self.create_profile(profile)
 
@@ -177,14 +187,36 @@ class Manager:
 
         self.save_profile_settings(profile, profile_settings)
 
-    def install(self):
+    @staticmethod
+    def run_extension_setups(action: str) -> None:
+        configs_dir = "./configs"
+
+        for name in sorted(os.listdir(configs_dir)):
+            setup_path = os.path.join(configs_dir, name, "setup.py")
+            if not os.path.isfile(setup_path):
+                debug(f"No setup.py found in {name}, skipping")
+                continue
+
+            spec = importlib.util.spec_from_file_location(f"configs.{name}.setup", setup_path)
+            if not spec or not spec.loader:
+                continue
+
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+
+            fn = getattr(module, action, None)
+            if callable(fn):
+                debug(f"Running {action} for {name}")
+                fn()
+
+    def install(self) -> None:
         self.install_profile(self.primary_profile)
 
         other_profiles = [p for p in self.profiles if "primary" not in p]
         for profile in other_profiles:
             self.install_profile(profile, self.primary_profile)
 
-    def uninstall_profile(self, profile: Profile):
+    def uninstall_profile(self, profile: Profile) -> None:
         with open(self.storage_file_path, "r") as f:
             data = json.load(f)
 
@@ -198,11 +230,11 @@ class Manager:
             debug(f"Removing {profile['name']} profile")
             shutil.rmtree(profile_path)
 
-    def uninstall(self):
+    def uninstall(self) -> None:
         for profile in self.profiles:
             self.uninstall_profile(profile)
 
-    def save_devcontainer_profile(self, profile: Profile, primary_profile: Optional[Profile] = None):
+    def save_devcontainer_profile(self, profile: Profile, primary_profile: Optional[Profile] = None) -> None:
         data: DevContainerConfig = {"customizations": {"vscode": {"extensions": [], "settings": {}}}}
 
         settings = self.merge_profile_settings(profile)
@@ -233,7 +265,7 @@ class Manager:
         with open(f"./devcontainers/{profile['id']}.json", "w") as f:
             json.dump(data, f, indent=2)
 
-    def generate_devcontainer_profiles(self):
+    def generate_devcontainer_profiles(self) -> None:
         self.save_devcontainer_profile(self.primary_profile)
 
         other_profiles = [p for p in self.profiles if "primary" not in p]
@@ -246,6 +278,8 @@ def main() -> None:
     parser.add_argument("--install", action="store_true", help="Install all profiles")
     parser.add_argument("--uninstall", action="store_true", help="Uninstall all profiles")
     parser.add_argument("--devcontainers", action="store_true", help="Generate devcontainer profiles")
+    parser.add_argument("--install-configs", action="store_true", help="Install extension configurations")
+    parser.add_argument("--uninstall-configs", action="store_true", help="Uninstall extension configurations")
     args = parser.parse_args()
 
     manager = Manager()
@@ -256,8 +290,14 @@ def main() -> None:
         manager.uninstall()
     elif args.devcontainers:
         manager.generate_devcontainer_profiles()
+    elif args.install_configs:
+        Manager.run_extension_setups("install")
+    elif args.uninstall_configs:
+        Manager.run_extension_setups("uninstall")
     else:
-        print("No action specified. Use --install, --uninstall or --devcontainers")
+        print(
+            "No action specified. Use --install, --uninstall, --devcontainers, --install-configs or --uninstall-configs"
+        )
 
 
 if __name__ == "__main__":

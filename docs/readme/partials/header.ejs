@@ -26,9 +26,15 @@ Whether you're working with PHP, JavaScript, Python, or modern front-end framewo
 # Install profiles
 python manage_profiles.py --install
 
-# Configure extensions
-./configure.sh
+# Install extension configurations (optional)
+python manage_profiles.py --install-configs
+
+# Uninstall extension configurations
+python manage_profiles.py --uninstall-configs
 
 # Uninstall profiles
 python manage_profiles.py --uninstall
+
+# Generate devcontainer profiles
+python manage_profiles.py --devcontainers
 ```
