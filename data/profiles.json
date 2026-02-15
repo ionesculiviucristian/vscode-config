@@ -206,14 +206,9 @@
         }
       },
       {
-        "description": "Display import/require package size in the editor",
-        "id": "wix.vscode-import-cost",
-        "name": "Import Cost"
-      },
-      {
-        "description": "AI-assisted development",
-        "id": "VisualStudioExptTeam.vscodeintellicode",
-        "name": "IntelliCode"
+        "description": "Allow peeking to css ID and class strings as definitions from html files to respective CSS. Allows peek and goto definition",
+        "id": "pranaygp.vscode-css-peek",
+        "name": "CSS Peek"
       },
       {
         "description": "Boost your productivity with advanced JavaScript/TypeScript refactorings and commands",
@@ -291,6 +286,9 @@
       "editor.formatOnPaste": true,
       "editor.formatOnSave": true,
       "editor.linkedEditing": true,
+      "editor.bracketPairColorization.enabled": true,
+      "editor.guides.bracketPairs": "active",
+      "editor.inlayHints.enabled": "offUnlessPressed",
       "editor.stickyScroll.enabled": false,
       "files.autoSave": "afterDelay",
       "files.insertFinalNewline": true,
@@ -352,33 +350,17 @@
         "name": "Better Jinja"
       },
       {
-        "description": "Formatting support for Python files using the Black formatter",
-        "id": "ms-python.black-formatter",
-        "name": "Black Formatter",
+        "description": "A Visual Studio Code extension with support for the Ruff linter and formatter for Python",
+        "id": "charliermarsh.ruff",
+        "name": "Ruff",
         "settings": {
-          "black-formatter.args": ["--line-length", "120"]
+          "ruff.lineLength": 120
         }
       },
       {
         "description": "A performant, feature-rich language server for Python in VS Code",
         "id": "ms-python.vscode-pylance",
         "name": "Pylance"
-      },
-      {
-        "description": "Linting support for Python files using Flake8",
-        "id": "ms-python.flake8",
-        "name": "Flake8",
-        "settings": {
-          "flake8.args": ["--max-line-length=120"]
-        }
-      },
-      {
-        "description": "Import organization support for Python files using isort",
-        "id": "ms-python.isort",
-        "name": "isort",
-        "settings": {
-          "isort.args": ["--profile", "black"]
-        }
       },
       {
         "description": "Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more",
@@ -391,9 +373,10 @@
     "settings": {
       "[python]": {
         "editor.codeActionsOnSave": {
-          "source.organizeImports": "always"
+          "source.fixAll.ruff": "explicit",
+          "source.organizeImports.ruff": "explicit"
         },
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "charliermarsh.ruff"
       },
       "python.analysis.autoImportCompletions": true,
       "python.analysis.typeCheckingMode": "strict",

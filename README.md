@@ -63,6 +63,9 @@ python manage_profiles.py --devcontainers
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.linkedEditing": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.stickyScroll.enabled": false,
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
@@ -118,6 +121,8 @@ python manage_profiles.py --devcontainers
 
 - [Continue - open-source AI code agent](https://marketplace.visualstudio.com/items?itemName=Continue.continue): The leading open-source AI code agent
 
+- [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek): Allow peeking to css ID and class strings as definitions from html files to respective CSS. Allows peek and goto definition
+
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv): Support for dotenv file syntax
 
 ```json
@@ -165,10 +170,6 @@ python manage_profiles.py --devcontainers
 - [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins): Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins
 
 - [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete): To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace
-
-- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): Display import/require package size in the editor
-
-- [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode): AI-assisted development
 
 - [JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster): Boost your productivity with advanced JavaScript/TypeScript refactorings and commands
 
@@ -306,9 +307,10 @@ python manage_profiles.py --devcontainers
 {
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "always"
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
     },
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "python.analysis.autoImportCompletions": true,
   "python.analysis.typeCheckingMode": "strict",
@@ -318,41 +320,17 @@ python manage_profiles.py --devcontainers
 
 - [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml): Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates
 
-- [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter): Formatting support for Python files using the Black formatter
-
-```json
-{
-  "black-formatter.args": [
-    "--line-length",
-    "120"
-  ]
-}
-```
-
-- [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8): Linting support for Python files using Flake8
-
-```json
-{
-  "flake8.args": [
-    "--max-line-length=120"
-  ]
-}
-```
-
-- [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort): Import organization support for Python files using isort
-
-```json
-{
-  "isort.args": [
-    "--profile",
-    "black"
-  ]
-}
-```
-
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance): A performant, feature-rich language server for Python in VS Code
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more
+
+- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff): A Visual Studio Code extension with support for the Ruff linter and formatter for Python
+
+```json
+{
+  "ruff.lineLength": 120
+}
+```
 
 ### Vue
 
