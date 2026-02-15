@@ -27,16 +27,6 @@
         "name": "Remote Development"
       },
       {
-        "description": "Your AI pair programmer",
-        "id": "GitHub.copilot",
-        "name": "GitHub Copilot"
-      },
-      {
-        "description": "AI chat features powered by Copilot",
-        "id": "GitHub.copilot-chat",
-        "name": "GitHub Copilot Chat"
-      },
-      {
         "description": "Official Stylelint extension for Visual Studio Code",
         "id": "stylelint.vscode-stylelint",
         "name": "Stylelint",
@@ -269,6 +259,21 @@
         "description": "The leading open-source AI code agent",
         "id": "Continue.continue",
         "name": "Continue - open-source AI code agent"
+      },
+      {
+        "description": "A language server for Bash",
+        "id": "mads-hartmann.bash-ide-vscode",
+        "name": "Bash IDE",
+        "settings": {
+          "[shellscript]": {
+            "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+          }
+        }
+      },
+      {
+        "description": "Display pdf files in VS Code",
+        "id": "tomoki1207.pdf",
+        "name": "vscode-pdf"
       }
     ],
     "id": "enhanced",
@@ -432,5 +437,37 @@
       "extensions.autoUpdateExceptions": ["Vue.volar"]
     },
     "version": "3.0.5"
+  },
+  {
+    "extensions": [
+      {
+        "description": "Rich Go language support for Visual Studio Code",
+        "id": "golang.go",
+        "name": "Go"
+      }
+    ],
+    "id": "go",
+    "name": "Go"
+  },
+  {
+    "extensions": [
+      {
+        "description": "Grafana Alloy support",
+        "id": "grafana.grafana-alloy",
+        "name": "Grafana Alloy"
+      },
+      {
+        "description": "Grafana Editor",
+        "id": "grafana.grafana-vscode",
+        "name": "Grafana"
+      },
+      {
+        "description": "Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet",
+        "id": "grafana.vscode-jsonnet",
+        "name": "Jsonnet"
+      }
+    ],
+    "id": "grafana",
+    "name": "Grafana"
   }
 ]

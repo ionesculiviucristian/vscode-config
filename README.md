@@ -8,6 +8,8 @@
 - [Installation](#installation)
 - [List of available profiles](#list-of-available-profiles)
   - [Enhanced](#enhanced)
+  - [Go](#go)
+  - [Grafana](#grafana)
   - [Laravel with Vue](#laravel-with-vue)
   - [PHP](#php)
   - [Python](#python)
@@ -63,6 +65,16 @@ python manage_profiles.py --uninstall
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "workbench.startupEditor": "none"
+}
+```
+
+- [Bash IDE](https://marketplace.visualstudio.com/items?itemName=mads-hartmann.bash-ide-vscode): A language server for Bash
+
+```json
+{
+  "[shellscript]": {
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+  }
 }
 ```
 
@@ -139,10 +151,6 @@ python manage_profiles.py --uninstall
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): View a Git Graph of your repository, and perform Git actions from the graph
 
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits
-
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot): Your AI pair programmer
-
-- [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat): AI chat features powered by Copilot
 
 - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github): Pull Request and Issue Provider for GitHub
 
@@ -230,6 +238,8 @@ python manage_profiles.py --uninstall
 
 - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim): Vim emulation for Visual Studio Code
 
+- [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf): Display pdf files in VS Code
+
 - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml): XML Language Support by Red Hat
 
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml): YAML Language Support by Red Hat, with built-in Kubernetes syntax support
@@ -249,6 +259,18 @@ python manage_profiles.py --uninstall
   "vscode-yaml-sort.sortArrays": true
 }
 ```
+
+### Go
+
+- [Go](https://marketplace.visualstudio.com/items?itemName=golang.go): Rich Go language support for Visual Studio Code
+
+### Grafana
+
+- [Grafana](https://marketplace.visualstudio.com/items?itemName=grafana.grafana-vscode): Grafana Editor
+
+- [Grafana Alloy](https://marketplace.visualstudio.com/items?itemName=grafana.grafana-alloy): Grafana Alloy support
+
+- [Jsonnet](https://marketplace.visualstudio.com/items?itemName=grafana.vscode-jsonnet): Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet
 
 ### Laravel with Vue
 

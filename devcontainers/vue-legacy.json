@@ -8,8 +8,6 @@
         "GitLab.gitlab-workflow",
         "aaron-bond.better-comments",
         "ms-vscode-remote.vscode-remote-extensionpack",
-        "GitHub.copilot",
-        "GitHub.copilot-chat",
         "stylelint.vscode-stylelint",
         "Gruntfuggly.todo-tree",
         "redhat.vscode-xml",
@@ -43,7 +41,10 @@
         "sumneko.lua",
         "vscodevim.vim",
         "vintharas.learn-vim",
-        "EditorConfig.EditorConfig"
+        "EditorConfig.EditorConfig",
+        "Continue.continue",
+        "mads-hartmann.bash-ide-vscode",
+        "tomoki1207.pdf"
       ],
       "settings": {
         "[vue]": {
@@ -57,7 +58,8 @@
         "[shellscript]": {
           "editor.rulers": [
             80
-          ]
+          ],
+          "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
         },
         "editor.codeActionsOnSave": {
           "source.addMissingImports": "explicit",
