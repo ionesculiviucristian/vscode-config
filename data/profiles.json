@@ -427,6 +427,11 @@
         "description": "Rich Go language support for Visual Studio Code",
         "id": "golang.go",
         "name": "Go"
+      },
+      {
+        "description": "Provides syntax highlighting and templ LSP integration",
+        "id": "a-h.templ",
+        "name": "templ-vscode"
       }
     ],
     "id": "go",

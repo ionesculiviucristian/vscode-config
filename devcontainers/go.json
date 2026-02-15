@@ -3,6 +3,7 @@
     "vscode": {
       "extensions": [
         "golang.go",
+        "a-h.templ",
         "jasonlhy.hungry-delete",
         "GitHub.vscode-pull-request-github",
         "GitLab.gitlab-workflow",
