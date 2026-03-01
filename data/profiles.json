@@ -435,7 +435,12 @@
       }
     ],
     "id": "go",
-    "name": "Go"
+    "name": "Go",
+    "settings": {
+      "[go]": {
+        "editor.defaultFormatter": "golang.go"
+      }
+    }
   },
   {
     "extensions": [

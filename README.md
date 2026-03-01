@@ -269,6 +269,14 @@ python manage_profiles.py --devcontainers
 
 ### Go
 
+```json
+{
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  }
+}
+```
+
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go): Rich Go language support for Visual Studio Code
 
 - [templ-vscode](https://marketplace.visualstudio.com/items?itemName=a-h.templ): Provides syntax highlighting and templ LSP integration

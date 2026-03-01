@@ -47,6 +47,9 @@
         "tomoki1207.pdf"
       ],
       "settings": {
+        "[go]": {
+          "editor.defaultFormatter": "golang.go"
+        },
         "[shellscript]": {
           "editor.rulers": [
             80
