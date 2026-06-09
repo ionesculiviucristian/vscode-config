@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [About this project](#about-this-project)
-- [Installation](#installation)
+- [Usage](#usage)
 - [List of available profiles](#list-of-available-profiles)
   - [Enhanced](#enhanced)
   - [Go](#go)
@@ -19,13 +19,11 @@
 
 ## About this project
 
-This project provides a structured and customizable Visual Studio Code environment tailored for modern development workflows. It offers a range of pre-configured profiles for popular tech stacks like Laravel with Vue, Python, React, and more—each designed to enhance productivity, enforce consistency, and support best practices.
+A collection of ready-made Visual Studio Code profiles for different kinds of development work. Instead of configuring the editor from scratch for every project, you pick a profile and get a consistent setup right away.
 
-The configuration includes essential editor settings, themes, and an extensive collection of curated extensions to streamline coding, debugging, linting, formatting, and version control. Developers can easily install or uninstall profiles using a command-line tool, allowing for seamless setup across different projects or teams.
+Each profile targets a specific stack and builds on a shared base, bundling the extensions, theme, and settings that fit it - so formatting, linting, and debugging work out of the box.
 
-Whether you're working with PHP, JavaScript, Python, or modern front-end frameworks, this setup helps you stay focused with a clean interface, useful automation, and optimized tooling.
-
-## Installation
+## Usage
 
 ```bash
 # Install profiles
