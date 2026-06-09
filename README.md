@@ -383,6 +383,8 @@ python manage_profiles.py --devcontainers
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more
 
+- [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy): Python Debugger extension using debugpy
+
 - [Python Environments](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs): Provides a unified python environment experience
 
 - [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff): A Visual Studio Code extension with support for the Ruff linter and formatter for Python

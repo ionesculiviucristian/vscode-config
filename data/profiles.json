@@ -366,6 +366,11 @@
         "description": "Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more",
         "id": "ms-python.python",
         "name": "Python"
+      },
+      {
+        "description": "Python Debugger extension using debugpy",
+        "id": "ms-python.debugpy",
+        "name": "Python Debugger"
       }
     ],
     "id": "python",
