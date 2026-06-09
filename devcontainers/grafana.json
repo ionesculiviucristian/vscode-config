@@ -3,7 +3,6 @@
     "vscode": {
       "extensions": [
         "Grafana.grafana-alloy",
-        "Grafana.grafana-vscode",
         "Grafana.vscode-jsonnet",
         "jasonlhy.hungry-delete",
         "GitHub.vscode-pull-request-github",

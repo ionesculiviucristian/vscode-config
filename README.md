@@ -317,8 +317,6 @@ python manage_profiles.py --devcontainers
 
 ### Grafana
 
-- [Grafana](https://marketplace.visualstudio.com/items?itemName=Grafana.grafana-vscode): Grafana Editor
-
 - [Grafana Alloy](https://marketplace.visualstudio.com/items?itemName=Grafana.grafana-alloy): Grafana Alloy support
 
 - [Jsonnet](https://marketplace.visualstudio.com/items?itemName=Grafana.vscode-jsonnet): Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet

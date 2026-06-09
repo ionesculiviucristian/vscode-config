@@ -473,11 +473,6 @@
         "name": "Grafana Alloy"
       },
       {
-        "description": "Grafana Editor",
-        "id": "Grafana.grafana-vscode",
-        "name": "Grafana"
-      },
-      {
         "description": "Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet",
         "id": "Grafana.vscode-jsonnet",
         "name": "Jsonnet",
