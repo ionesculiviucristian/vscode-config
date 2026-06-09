@@ -47,7 +47,16 @@
           "editor.defaultFormatter": "golang.go"
         },
         "gopls": {
+          "formatting.gofumpt": true,
+          "ui.diagnostic.analyses": {
+            "nilness": true,
+            "shadow": true,
+            "unusedparams": true,
+            "unusedwrite": true,
+            "useany": true
+          },
           "ui.diagnostic.staticcheck": true,
+          "ui.diagnostic.vulncheck": "Imports",
           "ui.semanticTokens": true
         },
         "[templ]": {

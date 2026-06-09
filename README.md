@@ -299,7 +299,16 @@ python manage_profiles.py --devcontainers
 ```json
 {
   "gopls": {
-    "ui.diagnostic.staticcheck": true
+    "formatting.gofumpt": true,
+    "ui.diagnostic.analyses": {
+      "nilness": true,
+      "shadow": true,
+      "unusedparams": true,
+      "unusedwrite": true,
+      "useany": true
+    },
+    "ui.diagnostic.staticcheck": true,
+    "ui.diagnostic.vulncheck": "Imports"
   }
 }
 ```
