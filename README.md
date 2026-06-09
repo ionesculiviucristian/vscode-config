@@ -55,6 +55,7 @@ python manage_profiles.py --devcontainers
       80
     ]
   },
+  "chat.disableAIFeatures": true,
   "editor.codeActionsOnSave": {
     "source.addMissingImports": "explicit"
   },
@@ -62,22 +63,28 @@ python manage_profiles.py --devcontainers
   "editor.fontSize": 18,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.linkedEditing": true,
-  "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.linkedEditing": true,
   "editor.stickyScroll.enabled": false,
-  "files.autoSave": "afterDelay",
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.ignoreWhitespace": true,
+  "git.blame.statusBarItem.enabled": true,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "always",
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "git.smartCommitChanges": "tracked",
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "workbench.settings.alwaysShowAdvancedSettings": true,
   "workbench.startupEditor": "none"
 }
 ```
 
 - [Bash IDE](https://marketplace.visualstudio.com/items?itemName=mads-hartmann.bash-ide-vscode): A language server for Bash
+  - Requires [shfmt](https://github.com/mvdan/sh)
 
 ```json
 {
@@ -87,7 +94,9 @@ python manage_profiles.py --devcontainers
 }
 ```
 
-- [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments): Improve your code commenting by annotating with alert, informational, TODOs, and more!
+- [Better Comments Next](https://marketplace.visualstudio.com/items?itemName=EdwinHuiSH.better-comments-next): Improve your code commenting by annotating with alert, informational, TODOs, and more!
+
+- [Better Todo Tree](https://marketplace.visualstudio.com/items?itemName=FanaticPythoner.better-todo-tree): The maintained successor to Todo Tree for VS Code: same workflow, active fixes, better compatibility, and ongoing improvements.
 
 - [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc): Soothing pastel theme for VSCode
 
@@ -119,8 +128,6 @@ python manage_profiles.py --devcontainers
 }
 ```
 
-- [Continue - open-source AI code agent](https://marketplace.visualstudio.com/items?itemName=Continue.continue): The leading open-source AI code agent
-
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek): Allow peeking to css ID and class strings as definitions from html files to respective CSS. Allows peek and goto definition
 
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv): Support for dotenv file syntax
@@ -139,8 +146,10 @@ python manage_profiles.py --devcontainers
 
 ```json
 {
-  "errorLens.excludeBySource": [
-    "cSpell"
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info"
   ]
 }
 ```
@@ -157,23 +166,21 @@ python manage_profiles.py --devcontainers
 
 - [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml): Fully-featured TOML support
 
-- [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame): See git blame information in the status bar
+```json
+{
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  }
+}
+```
 
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): View a Git Graph of your repository, and perform Git actions from the graph
-
-- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits
 
 - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github): Pull Request and Issue Provider for GitHub
 
 - [GitLab Workflow](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow): Official GitLab-maintained extension for Visual Studio Code
 
-- [Gremlins tracker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins): Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins
-
 - [Hungry Delete](https://marketplace.visualstudio.com/items?itemName=jasonlhy.hungry-delete): To delete an entire block of whitespace or tab, and reduce the time programmers need to press backspace
-
-- [JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster): Boost your productivity with advanced JavaScript/TypeScript refactorings and commands
-
-- [Learn Vim](https://marketplace.visualstudio.com/items?itemName=vintharas.learn-vim): Learn Vim right within your favorite editor
 
 - [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua): Lua Language Server coded by Lua
 
@@ -185,8 +192,7 @@ python manage_profiles.py --devcontainers
 
 ```json
 {
-  "javascript.suggest.paths": false,
-  "typescript.suggest.paths": false
+  "js/ts.suggest.paths": false
 }
 ```
 
@@ -194,15 +200,14 @@ python manage_profiles.py --devcontainers
 
 ```json
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.requireConfig": true
 }
 ```
 
 - [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors): Make TypeScript errors prettier and more human-readable in VSCode
 
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack): An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set
-
-- [SFTP](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp): SFTP/FTP sync
 
 - [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck): Integrates ShellCheck into VS Code, a linter for Shell scripts
 
@@ -241,18 +246,27 @@ python manage_profiles.py --devcontainers
 
 - [Text Power Tools](https://marketplace.visualstudio.com/items?itemName=qcz.text-power-tools): All-in-one solution with 240+ commands for text manipulation: filter lines (grep), remove lines, insert number sequences and GUIDs, sorting, change case, converting numbers, generating fake data and more
 
-- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree): Show TODO, FIXME, etc. comment tags in a tree view
-
 - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim): Vim emulation for Visual Studio Code
 
 - [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf): Display pdf files in VS Code
 
 - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml): XML Language Support by Red Hat
 
+```json
+{
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  }
+}
+```
+
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml): YAML Language Support by Red Hat, with built-in Kubernetes syntax support
 
 ```json
 {
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "redhat.telemetry.enabled": false
 }
 ```
@@ -272,6 +286,9 @@ python manage_profiles.py --devcontainers
 ```json
 {
   "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
     "editor.defaultFormatter": "golang.go"
   }
 }
@@ -279,15 +296,40 @@ python manage_profiles.py --devcontainers
 
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go): Rich Go language support for Visual Studio Code
 
+```json
+{
+  "gopls": {
+    "ui.diagnostic.staticcheck": true
+  }
+}
+```
+
 - [templ-vscode](https://marketplace.visualstudio.com/items?itemName=a-h.templ): Provides syntax highlighting and templ LSP integration
+  - Requires [templ](https://templ.guide)
+
+```json
+{
+  "[templ]": {
+    "editor.defaultFormatter": "a-h.templ"
+  }
+}
+```
 
 ### Grafana
 
-- [Grafana](https://marketplace.visualstudio.com/items?itemName=grafana.grafana-vscode): Grafana Editor
+- [Grafana](https://marketplace.visualstudio.com/items?itemName=Grafana.grafana-vscode): Grafana Editor
 
-- [Grafana Alloy](https://marketplace.visualstudio.com/items?itemName=grafana.grafana-alloy): Grafana Alloy support
+- [Grafana Alloy](https://marketplace.visualstudio.com/items?itemName=Grafana.grafana-alloy): Grafana Alloy support
 
-- [Jsonnet](https://marketplace.visualstudio.com/items?itemName=grafana.vscode-jsonnet): Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet
+- [Jsonnet](https://marketplace.visualstudio.com/items?itemName=Grafana.vscode-jsonnet): Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet
+
+```json
+{
+  "[jsonnet]": {
+    "editor.defaultFormatter": "Grafana.vscode-jsonnet"
+  }
+}
+```
 
 ### Laravel with Vue
 
@@ -311,6 +353,14 @@ python manage_profiles.py --devcontainers
 
 - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client): PHP code intelligence for Visual Studio Code
 
+```json
+{
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  }
+}
+```
+
 ### Python
 
 ```json
@@ -322,6 +372,7 @@ python manage_profiles.py --devcontainers
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "python-envs.terminal.autoActivationType": "off",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.typeCheckingMode": "strict",
   "python.terminal.activateEnvironment": false
@@ -333,6 +384,8 @@ python manage_profiles.py --devcontainers
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance): A performant, feature-rich language server for Python in VS Code
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more
+
+- [Python Environments](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs): Provides a unified python environment experience
 
 - [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff): A Visual Studio Code extension with support for the Ruff linter and formatter for Python
 
@@ -355,6 +408,12 @@ python manage_profiles.py --devcontainers
 ```
 
 - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar): Language Support for Vue
+
+```json
+{
+  "vue.autoInsert.dotValue": true
+}
+```
 
 ### Vue (legacy)
 

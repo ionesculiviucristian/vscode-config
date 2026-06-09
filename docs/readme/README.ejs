@@ -8,6 +8,9 @@
 <% } %>
 <% profile.extensions.forEach(function(extension){ %>
 - [<%- extension.name %>](<%- extension.url %>): <%- extension.description -%>
+<% if (extension.requirements) { -%>
+<%- `\n  - Requires ${extension.requirements.map((r) => `[${r.name}](${r.url})`).join(", ")}` -%>
+<% } -%>
 <% if (extension.settings) { %>
 <%- `${extension.settings}` -%>
 <% } %>

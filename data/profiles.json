@@ -18,8 +18,8 @@
       },
       {
         "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
-        "id": "aaron-bond.better-comments",
-        "name": "Better Comments"
+        "id": "EdwinHuiSH.better-comments-next",
+        "name": "Better Comments Next"
       },
       {
         "description": "An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set",
@@ -37,14 +37,19 @@
         }
       },
       {
-        "description": "Show TODO, FIXME, etc. comment tags in a tree view",
-        "id": "Gruntfuggly.todo-tree",
-        "name": "Todo Tree"
+        "description": "The maintained successor to Todo Tree for VS Code: same workflow, active fixes, better compatibility, and ongoing improvements.",
+        "id": "FanaticPythoner.better-todo-tree",
+        "name": "Better Todo Tree"
       },
       {
         "description": "XML Language Support by Red Hat",
         "id": "redhat.vscode-xml",
-        "name": "XML"
+        "name": "XML",
+        "settings": {
+          "[xml]": {
+            "editor.defaultFormatter": "redhat.vscode-xml"
+          }
+        }
       },
       {
         "description": "Integrates ShellCheck into VS Code, a linter for Shell scripts",
@@ -58,19 +63,9 @@
         }
       },
       {
-        "description": "See git blame information in the status bar",
-        "id": "waderyan.gitblame",
-        "name": "Git Blame"
-      },
-      {
         "description": "View a Git Graph of your repository, and perform Git actions from the graph",
         "id": "mhutchie.git-graph",
         "name": "Git Graph"
-      },
-      {
-        "description": "View git log, file history, compare branches or commits",
-        "id": "donjayamanne.githistory",
-        "name": "Git History"
       },
       {
         "description": "Spelling checker for source code",
@@ -108,7 +103,12 @@
       {
         "description": "Fully-featured TOML support",
         "id": "tamasfe.even-better-toml",
-        "name": "Even Better TOML"
+        "name": "Even Better TOML",
+        "settings": {
+          "[toml]": {
+            "editor.defaultFormatter": "tamasfe.even-better-toml"
+          }
+        }
       },
       {
         "description": "Markdown linting and style checking for Visual Studio Code",
@@ -120,7 +120,8 @@
         "id": "esbenp.prettier-vscode",
         "name": "Prettier - Code formatter",
         "settings": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "prettier.requireConfig": true
         }
       },
       {
@@ -148,7 +149,7 @@
         "id": "usernamehw.errorlens",
         "name": "Error Lens",
         "settings": {
-          "errorLens.excludeBySource": ["cSpell"]
+          "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"]
         }
       },
       {
@@ -161,8 +162,7 @@
         "id": "christian-kohler.path-intellisense",
         "name": "Path Intellisense",
         "settings": {
-          "javascript.suggest.paths": false,
-          "typescript.suggest.paths": false
+          "js/ts.suggest.paths": false
         }
       },
       {
@@ -171,15 +171,13 @@
         "name": "Pretty TypeScript Errors"
       },
       {
-        "description": "SFTP/FTP sync",
-        "id": "Natizyskunk.sftp",
-        "name": "SFTP"
-      },
-      {
         "description": "YAML Language Support by Red Hat, with built-in Kubernetes syntax support",
         "id": "redhat.vscode-yaml",
         "name": "YAML",
         "settings": {
+          "[yaml]": {
+            "editor.defaultFormatter": "redhat.vscode-yaml"
+          },
           "redhat.telemetry.enabled": false
         }
       },
@@ -211,16 +209,6 @@
         "name": "CSS Peek"
       },
       {
-        "description": "Boost your productivity with advanced JavaScript/TypeScript refactorings and commands",
-        "id": "sburg.vscode-javascript-booster",
-        "name": "JavaScript Booster"
-      },
-      {
-        "description": "Reveals some characters that can be harmful because they are invisible or looking like legitimate ones. Inspired by Sublime Gremlins",
-        "id": "nhoizey.gremlins",
-        "name": "Gremlins tracker for Visual Studio Code"
-      },
-      {
         "description": "A Lua code formatter",
         "id": "JohnnyMorganz.stylua",
         "name": "StyLua",
@@ -241,24 +229,20 @@
         "name": "Vim"
       },
       {
-        "description": "Learn Vim right within your favorite editor",
-        "id": "vintharas.learn-vim",
-        "name": "Learn Vim"
-      },
-      {
         "description": "EditorConfig Support for Visual Studio Code",
         "id": "EditorConfig.EditorConfig",
         "name": "EditorConfig for VS Code"
       },
       {
-        "description": "The leading open-source AI code agent",
-        "id": "Continue.continue",
-        "name": "Continue - open-source AI code agent"
-      },
-      {
         "description": "A language server for Bash",
         "id": "mads-hartmann.bash-ide-vscode",
         "name": "Bash IDE",
+        "requirements": [
+          {
+            "name": "shfmt",
+            "url": "https://github.com/mvdan/sh"
+          }
+        ],
         "settings": {
           "[shellscript]": {
             "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
@@ -278,6 +262,7 @@
       "[shellscript]": {
         "editor.rulers": [80]
       },
+      "chat.disableAIFeatures": true,
       "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit"
       },
@@ -285,17 +270,22 @@
       "editor.fontSize": 18,
       "editor.formatOnPaste": true,
       "editor.formatOnSave": true,
-      "editor.linkedEditing": true,
-      "editor.bracketPairColorization.enabled": true,
       "editor.guides.bracketPairs": "active",
       "editor.inlayHints.enabled": "offUnlessPressed",
+      "editor.linkedEditing": true,
       "editor.stickyScroll.enabled": false,
-      "files.autoSave": "afterDelay",
+      "editor.unicodeHighlight.ambiguousCharacters": true,
+      "editor.unicodeHighlight.invisibleCharacters": true,
+      "files.autoSave": "onFocusChange",
       "files.insertFinalNewline": true,
+      "git.blame.editorDecoration.enabled": true,
+      "git.blame.ignoreWhitespace": true,
+      "git.blame.statusBarItem.enabled": true,
       "git.enableSmartCommit": true,
       "git.openRepositoryInParentFolders": "always",
-      "javascript.preferences.importModuleSpecifier": "non-relative",
-      "typescript.preferences.importModuleSpecifier": "non-relative",
+      "git.smartCommitChanges": "tracked",
+      "js/ts.preferences.importModuleSpecifier": "non-relative",
+      "workbench.settings.alwaysShowAdvancedSettings": true,
       "workbench.startupEditor": "none"
     }
   },
@@ -314,7 +304,12 @@
       {
         "description": "PHP code intelligence for Visual Studio Code",
         "id": "bmewburn.vscode-intelephense-client",
-        "name": "PHP Intelephense"
+        "name": "PHP Intelephense",
+        "settings": {
+          "[php]": {
+            "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+          }
+        }
       }
     ],
     "id": "php",
@@ -363,6 +358,11 @@
         "name": "Pylance"
       },
       {
+        "description": "Provides a unified python environment experience",
+        "id": "ms-python.vscode-python-envs",
+        "name": "Python Environments"
+      },
+      {
         "description": "Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more",
         "id": "ms-python.python",
         "name": "Python"
@@ -378,6 +378,7 @@
         },
         "editor.defaultFormatter": "charliermarsh.ruff"
       },
+      "python-envs.terminal.autoActivationType": "off",
       "python.analysis.autoImportCompletions": true,
       "python.analysis.typeCheckingMode": "strict",
       "python.terminal.activateEnvironment": false
@@ -388,7 +389,10 @@
       {
         "description": "Language Support for Vue",
         "id": "Vue.volar",
-        "name": "Vue - Official"
+        "name": "Vue - Official",
+        "settings": {
+          "vue.autoInsert.dotValue": true
+        }
       }
     ],
     "id": "vue",
@@ -406,7 +410,8 @@
       {
         "description": "Language Support for Vue",
         "id": "Vue.volar",
-        "name": "Vue - Official"
+        "name": "Vue - Official",
+        "version": "3.0.8"
       }
     ],
     "id": "vue-legacy",
@@ -418,26 +423,44 @@
         }
       },
       "extensions.autoUpdateExceptions": ["Vue.volar"]
-    },
-    "version": "3.0.5"
+    }
   },
   {
     "extensions": [
       {
         "description": "Rich Go language support for Visual Studio Code",
         "id": "golang.go",
-        "name": "Go"
+        "name": "Go",
+        "settings": {
+          "gopls": {
+            "ui.diagnostic.staticcheck": true
+          }
+        }
       },
       {
         "description": "Provides syntax highlighting and templ LSP integration",
         "id": "a-h.templ",
-        "name": "templ-vscode"
+        "name": "templ-vscode",
+        "requirements": [
+          {
+            "name": "templ",
+            "url": "https://templ.guide"
+          }
+        ],
+        "settings": {
+          "[templ]": {
+            "editor.defaultFormatter": "a-h.templ"
+          }
+        }
       }
     ],
     "id": "go",
     "name": "Go",
     "settings": {
       "[go]": {
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "explicit"
+        },
         "editor.defaultFormatter": "golang.go"
       }
     }
@@ -446,18 +469,23 @@
     "extensions": [
       {
         "description": "Grafana Alloy support",
-        "id": "grafana.grafana-alloy",
+        "id": "Grafana.grafana-alloy",
         "name": "Grafana Alloy"
       },
       {
         "description": "Grafana Editor",
-        "id": "grafana.grafana-vscode",
+        "id": "Grafana.grafana-vscode",
         "name": "Grafana"
       },
       {
         "description": "Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet",
-        "id": "grafana.vscode-jsonnet",
-        "name": "Jsonnet"
+        "id": "Grafana.vscode-jsonnet",
+        "name": "Jsonnet",
+        "settings": {
+          "[jsonnet]": {
+            "editor.defaultFormatter": "Grafana.vscode-jsonnet"
+          }
+        }
       }
     ],
     "id": "grafana",

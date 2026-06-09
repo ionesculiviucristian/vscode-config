@@ -8,15 +8,13 @@
         "jasonlhy.hungry-delete",
         "GitHub.vscode-pull-request-github",
         "GitLab.gitlab-workflow",
-        "aaron-bond.better-comments",
+        "EdwinHuiSH.better-comments-next",
         "ms-vscode-remote.vscode-remote-extensionpack",
         "stylelint.vscode-stylelint",
-        "Gruntfuggly.todo-tree",
+        "FanaticPythoner.better-todo-tree",
         "redhat.vscode-xml",
         "timonwong.shellcheck",
-        "waderyan.gitblame",
         "mhutchie.git-graph",
-        "donjayamanne.githistory",
         "streetsidesoftware.code-spell-checker",
         "qcz.text-power-tools",
         "mikestead.dotenv",
@@ -31,25 +29,21 @@
         "yzhang.markdown-all-in-one",
         "christian-kohler.path-intellisense",
         "yoavbls.pretty-ts-errors",
-        "Natizyskunk.sftp",
         "redhat.vscode-yaml",
         "Catppuccin.catppuccin-vsc",
         "Catppuccin.catppuccin-vsc-icons",
         "pranaygp.vscode-css-peek",
-        "sburg.vscode-javascript-booster",
-        "nhoizey.gremlins",
         "JohnnyMorganz.stylua",
         "sumneko.lua",
         "vscodevim.vim",
-        "vintharas.learn-vim",
         "EditorConfig.EditorConfig",
-        "Continue.continue",
         "mads-hartmann.bash-ide-vscode",
         "tomoki1207.pdf"
       ],
       "settings": {
         "[php]": {
-          "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+          "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+          "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
         },
         "[shellscript]": {
           "editor.rulers": [
@@ -57,6 +51,7 @@
           ],
           "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
         },
+        "chat.disableAIFeatures": true,
         "editor.codeActionsOnSave": {
           "source.addMissingImports": "explicit",
           "source.fixAll.eslint": "explicit"
@@ -65,21 +60,29 @@
         "editor.fontSize": 18,
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
-        "editor.linkedEditing": true,
-        "editor.bracketPairColorization.enabled": true,
         "editor.guides.bracketPairs": "active",
         "editor.inlayHints.enabled": "offUnlessPressed",
+        "editor.linkedEditing": true,
         "editor.stickyScroll.enabled": false,
-        "files.autoSave": "afterDelay",
+        "editor.unicodeHighlight.ambiguousCharacters": true,
+        "editor.unicodeHighlight.invisibleCharacters": true,
+        "files.autoSave": "onFocusChange",
         "files.insertFinalNewline": true,
+        "git.blame.editorDecoration.enabled": true,
+        "git.blame.ignoreWhitespace": true,
+        "git.blame.statusBarItem.enabled": true,
         "git.enableSmartCommit": true,
         "git.openRepositoryInParentFolders": "always",
-        "javascript.preferences.importModuleSpecifier": "non-relative",
-        "typescript.preferences.importModuleSpecifier": "non-relative",
+        "git.smartCommitChanges": "tracked",
+        "js/ts.preferences.importModuleSpecifier": "non-relative",
+        "workbench.settings.alwaysShowAdvancedSettings": true,
         "workbench.startupEditor": "none",
         "css.validate": false,
         "less.validate": false,
         "scss.validate": false,
+        "[xml]": {
+          "editor.defaultFormatter": "redhat.vscode-xml"
+        },
         "shellcheck.ignorePatterns": {
           "**/*.env.*": true,
           "**/*.profile": true
@@ -88,15 +91,23 @@
         "files.associations": {
           "*.env.*": "dotenv"
         },
+        "[toml]": {
+          "editor.defaultFormatter": "tamasfe.even-better-toml"
+        },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "prettier.requireConfig": true,
         "vscode-yaml-sort.forceQuotes": true,
         "vscode-yaml-sort.quotingType": "\"",
         "vscode-yaml-sort.sortArrays": true,
-        "errorLens.excludeBySource": [
-          "cSpell"
+        "errorLens.enabledDiagnosticLevels": [
+          "error",
+          "warning",
+          "info"
         ],
-        "javascript.suggest.paths": false,
-        "typescript.suggest.paths": false,
+        "js/ts.suggest.paths": false,
+        "[yaml]": {
+          "editor.defaultFormatter": "redhat.vscode-yaml"
+        },
         "redhat.telemetry.enabled": false,
         "editor.semanticHighlighting.enabled": true,
         "gopls": {

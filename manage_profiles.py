@@ -5,7 +5,7 @@ import os
 import platform
 import shutil
 import subprocess
-from typing import Dict, List, Optional, TypedDict, Union
+from typing import NotRequired, TypedDict
 
 DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() == "true"
 
@@ -15,7 +15,12 @@ def debug(msg: str):
         print(msg)
 
 
-Settings = Dict[str, Union[str, int, bool, "Settings"]]
+Settings = dict[str, "str | int | bool | Settings"]
+
+
+class Requirement(TypedDict):
+    name: str
+    url: str
 
 
 class Extension(TypedDict):
@@ -23,13 +28,14 @@ class Extension(TypedDict):
     description: str
     id: str
     name: str
+    requirements: NotRequired[list[Requirement]]
     settings: Settings
-    version: Optional[str]
+    version: str | None
 
 
 class Profile(TypedDict):
-    extends: Optional[List[str]]
-    extensions: List[Extension]
+    extends: list[str] | None
+    extensions: list[Extension]
     id: str
     name: str
     primary: bool
@@ -37,7 +43,7 @@ class Profile(TypedDict):
 
 
 class DevContainerConfigCustomizationsVSCode(TypedDict):
-    extensions: List[str]
+    extensions: list[str]
     settings: Settings
 
 
@@ -50,10 +56,10 @@ class DevContainerConfig(TypedDict):
 
 
 class Manager:
-    primary_profile_settings: List[Settings]
+    primary_profile_settings: list[Settings]
     primary_profile: Profile
     profiles_dir: str
-    profiles: List[Profile]
+    profiles: list[Profile]
     storage_file_path: str
 
     def __init__(self):
@@ -104,14 +110,20 @@ class Manager:
             debug(f"Creating {userDataProfile['name']} profile")
             json.dump(data, f, indent=2)
 
+    @staticmethod
+    def get_extension_spec(extension: Extension) -> str:
+        version = f"@{extension['version']}" if "version" in extension else ""
+        return f"{extension['id']}{version}"
+
     def install_profile_extension(self, profile: Profile, extension: Extension) -> None:
         try:
-            version = f"@{extension['version']}" if "version" in extension else ""
-            debug(f"Installing {extension['id']}{version} extension for {profile['name']} profile")
+            spec = self.get_extension_spec(extension)
+            debug(f"Installing {spec} extension for {profile['name']} profile")
             subprocess.run(
-                ["code", "--profile", profile["name"], "--install-extension", f"{extension['id']}{version}"],
+                ["code", "--profile", profile["name"], "--install-extension", spec],
                 stdout=subprocess.DEVNULL,
                 check=True,
+                env={**os.environ, "NODE_OPTIONS": "--no-deprecation"},
             )
         except subprocess.CalledProcessError as e:
             raise Exception(
@@ -129,21 +141,21 @@ class Manager:
                 result[key] = value
         return result
 
-    def compile_profile_settings(self, profile: Profile, settings: List[Settings]) -> str:
+    def compile_profile_settings(self, profile: Profile, settings: list[Settings]) -> str:
         result: Settings = {}
         for item in settings:
             result = self.deep_merge(result, item)
         return json.dumps(result)
 
-    def save_profile_settings(self, profile: Profile, settings: List[Settings]) -> None:
+    def save_profile_settings(self, profile: Profile, settings: list[Settings]) -> None:
         compiled_settings = self.compile_profile_settings(profile, settings)
 
         with open(f"{self.profiles_dir}/{profile['id']}/settings.json", "w") as f:
             debug(f"Saving settings for {profile['name']} profile")
             json.dump(json.loads(compiled_settings), f, indent=2)
 
-    def merge_profile_settings(self, profile: Profile) -> List[Settings]:
-        settings: List[Settings] = []
+    def merge_profile_settings(self, profile: Profile) -> list[Settings]:
+        settings: list[Settings] = []
 
         if "settings" in profile:
             settings.append(profile["settings"])
@@ -154,7 +166,7 @@ class Manager:
 
         return settings
 
-    def install_profile(self, profile: Profile, primary_profile: Optional[Profile] = None) -> None:
+    def install_profile(self, profile: Profile, primary_profile: Profile | None = None) -> None:
         if not self.profile_exists(profile):
             self.create_profile(profile)
 
@@ -234,18 +246,18 @@ class Manager:
         for profile in self.profiles:
             self.uninstall_profile(profile)
 
-    def save_devcontainer_profile(self, profile: Profile, primary_profile: Optional[Profile] = None) -> None:
+    def save_devcontainer_profile(self, profile: Profile, primary_profile: Profile | None = None) -> None:
         data: DevContainerConfig = {"customizations": {"vscode": {"extensions": [], "settings": {}}}}
 
         settings = self.merge_profile_settings(profile)
 
         for extension in profile["extensions"]:
-            data["customizations"]["vscode"]["extensions"].append(extension["id"])
+            data["customizations"]["vscode"]["extensions"].append(self.get_extension_spec(extension))
 
         if primary_profile:
             settings += self.primary_profile_settings
             for extension in primary_profile["extensions"]:
-                data["customizations"]["vscode"]["extensions"].append(extension["id"])
+                data["customizations"]["vscode"]["extensions"].append(self.get_extension_spec(extension))
 
         if "extends" in profile and profile["extends"]:
             for extended in profile["extends"]:
@@ -256,7 +268,7 @@ class Manager:
                 if "settings" in extended_profile:
                     settings.append(extended_profile["settings"])
                 for extended_extension in extended_profile["extensions"]:
-                    data["customizations"]["vscode"]["extensions"].append(extended_extension["id"])
+                    data["customizations"]["vscode"]["extensions"].append(self.get_extension_spec(extended_extension))
                     if "settings" in extended_extension:
                         settings.append(extended_extension["settings"])
 
