@@ -5,6 +5,7 @@ import os
 import platform
 import shutil
 import subprocess
+from collections.abc import Callable
 from typing import NotRequired, TypedDict
 
 DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() == "true"
@@ -286,30 +287,26 @@ class Manager:
 
 
 def main() -> None:
+    actions: dict[str, tuple[str, Callable[["Manager"], None]]] = {
+        "install": ("Install all profiles", lambda m: m.install()),
+        "uninstall": ("Uninstall all profiles", lambda m: m.uninstall()),
+        "devcontainers": ("Generate devcontainer profiles", lambda m: m.generate_devcontainer_profiles()),
+        "install-configs": ("Install extension configurations", lambda m: m.run_extension_setups("install")),
+        "uninstall-configs": ("Uninstall extension configurations", lambda m: m.run_extension_setups("uninstall")),
+    }
+
     parser = argparse.ArgumentParser(description="Manage VSCode profiles")
-    parser.add_argument("--install", action="store_true", help="Install all profiles")
-    parser.add_argument("--uninstall", action="store_true", help="Uninstall all profiles")
-    parser.add_argument("--devcontainers", action="store_true", help="Generate devcontainer profiles")
-    parser.add_argument("--install-configs", action="store_true", help="Install extension configurations")
-    parser.add_argument("--uninstall-configs", action="store_true", help="Uninstall extension configurations")
+    group = parser.add_mutually_exclusive_group(required=True)
+    for name, (help_text, _) in actions.items():
+        group.add_argument(f"--{name}", action="store_true", help=help_text)
+
     args = parser.parse_args()
 
     manager = Manager()
-
-    if args.install:
-        manager.install()
-    elif args.uninstall:
-        manager.uninstall()
-    elif args.devcontainers:
-        manager.generate_devcontainer_profiles()
-    elif args.install_configs:
-        Manager.run_extension_setups("install")
-    elif args.uninstall_configs:
-        Manager.run_extension_setups("uninstall")
-    else:
-        print(
-            "No action specified. Use --install, --uninstall, --devcontainers, --install-configs or --uninstall-configs"
-        )
+    for name, (_, run) in actions.items():
+        if getattr(args, name.replace("-", "_")):
+            run(manager)
+            break
 
 
 if __name__ == "__main__":
