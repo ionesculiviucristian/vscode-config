@@ -32,8 +32,12 @@
         "name": "Stylelint",
         "settings": {
           "css.validate": false,
+          "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": "explicit"
+          },
           "less.validate": false,
-          "scss.validate": false
+          "scss.validate": false,
+          "stylelint.validate": ["css", "postcss", "scss", "less", "javascriptreact", "typescriptreact"]
         }
       },
       {
@@ -57,8 +61,29 @@
         "name": "ShellCheck",
         "settings": {
           "shellcheck.ignorePatterns": {
+            "**/*.csh": true,
+            "**/*.cshrc": true,
             "**/*.env.*": true,
-            "**/*.profile": true
+            "**/*.fish": true,
+            "**/*.login": true,
+            "**/*.logout": true,
+            "**/*.profile": true,
+            "**/*.tcsh": true,
+            "**/*.tcshrc": true,
+            "**/*.xonshrc": true,
+            "**/*.xsh": true,
+            "**/*.zlogin": true,
+            "**/*.zlogout": true,
+            "**/*.zprofile": true,
+            "**/*.zsh": true,
+            "**/*.zsh-theme": true,
+            "**/*.zshenv": true,
+            "**/*.zshrc": true,
+            "**/zlogin": true,
+            "**/zlogout": true,
+            "**/zprofile": true,
+            "**/zshenv": true,
+            "**/zshrc": true
           }
         }
       },
@@ -120,8 +145,7 @@
         "id": "esbenp.prettier-vscode",
         "name": "Prettier - Code formatter",
         "settings": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode",
-          "prettier.requireConfig": true
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
       },
       {
@@ -147,10 +171,7 @@
       {
         "description": "Improve highlighting of errors, warnings and other language diagnostics",
         "id": "usernamehw.errorlens",
-        "name": "Error Lens",
-        "settings": {
-          "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"]
-        }
+        "name": "Error Lens"
       },
       {
         "description": "All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)",
@@ -187,9 +208,6 @@
         "name": "Catppuccin for VSCode",
         "settings": {
           "editor.semanticHighlighting.enabled": true,
-          "gopls": {
-            "ui.semanticTokens": true
-          },
           "terminal.integrated.minimumContrastRatio": 1,
           "window.titleBarStyle": "custom",
           "workbench.colorTheme": "Catppuccin Mocha"
@@ -221,7 +239,10 @@
       {
         "description": "Lua Language Server coded by Lua",
         "id": "sumneko.lua",
-        "name": "Lua"
+        "name": "Lua",
+        "settings": {
+          "Lua.format.enable": false
+        }
       },
       {
         "description": "Vim emulation for Visual Studio Code",
@@ -246,12 +267,13 @@
         "settings": {
           "[shellscript]": {
             "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
-          }
+          },
+          "bashIde.shellcheckPath": ""
         }
       },
       {
         "description": "Display pdf files in VS Code",
-        "id": "tomoki1207.pdf",
+        "id": "mathematic.vscode-pdf",
         "name": "vscode-pdf"
       }
     ],
@@ -259,6 +281,9 @@
     "name": "Enhanced",
     "primary": true,
     "settings": {
+      "[markdown]": {
+        "files.trimTrailingWhitespace": false
+      },
       "[shellscript]": {
         "editor.rulers": [80]
       },
@@ -278,6 +303,8 @@
       "editor.unicodeHighlight.invisibleCharacters": true,
       "files.autoSave": "onFocusChange",
       "files.insertFinalNewline": true,
+      "files.trimFinalNewlines": true,
+      "files.trimTrailingWhitespace": true,
       "git.blame.editorDecoration.enabled": true,
       "git.blame.ignoreWhitespace": true,
       "git.blame.statusBarItem.enabled": true,
@@ -349,23 +376,41 @@
         "id": "charliermarsh.ruff",
         "name": "Ruff",
         "settings": {
+          "[python]": {
+            "editor.codeActionsOnSave": {
+              "source.fixAll.ruff": "explicit",
+              "source.organizeImports.ruff": "explicit"
+            },
+            "editor.defaultFormatter": "charliermarsh.ruff"
+          },
+          "ruff.configurationPreference": "filesystemFirst",
           "ruff.lineLength": 120
         }
       },
       {
         "description": "A performant, feature-rich language server for Python in VS Code",
         "id": "ms-python.vscode-pylance",
-        "name": "Pylance"
+        "name": "Pylance",
+        "settings": {
+          "python.analysis.autoImportCompletions": true,
+          "python.analysis.typeCheckingMode": "strict"
+        }
       },
       {
         "description": "Provides a unified python environment experience",
         "id": "ms-python.vscode-python-envs",
-        "name": "Python Environments"
+        "name": "Python Environments",
+        "settings": {
+          "python-envs.terminal.autoActivationType": "off"
+        }
       },
       {
         "description": "Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more",
         "id": "ms-python.python",
-        "name": "Python"
+        "name": "Python",
+        "settings": {
+          "python.terminal.activateEnvironment": false
+        }
       },
       {
         "description": "Python Debugger extension using debugpy",
@@ -374,20 +419,7 @@
       }
     ],
     "id": "python",
-    "name": "Python",
-    "settings": {
-      "[python]": {
-        "editor.codeActionsOnSave": {
-          "source.fixAll.ruff": "explicit",
-          "source.organizeImports.ruff": "explicit"
-        },
-        "editor.defaultFormatter": "charliermarsh.ruff"
-      },
-      "python-envs.terminal.autoActivationType": "off",
-      "python.analysis.autoImportCompletions": true,
-      "python.analysis.typeCheckingMode": "strict",
-      "python.terminal.activateEnvironment": false
-    }
+    "name": "Python"
   },
   {
     "extensions": [
@@ -426,8 +458,7 @@
         "editor.codeActionsOnSave": {
           "source.addMissingImports": "never"
         }
-      },
-      "extensions.autoUpdateExceptions": ["Vue.volar"]
+      }
     }
   },
   {
@@ -437,17 +468,14 @@
         "id": "golang.go",
         "name": "Go",
         "settings": {
+          "go.diagnostic.vulncheck": "Imports",
           "gopls": {
-            "formatting.gofumpt": true,
-            "ui.diagnostic.analyses": {
-              "nilness": true,
-              "shadow": true,
-              "unusedparams": true,
-              "unusedwrite": true,
-              "useany": true
+            "analyses": {
+              "shadow": true
             },
-            "ui.diagnostic.staticcheck": true,
-            "ui.diagnostic.vulncheck": "Imports"
+            "gofumpt": true,
+            "semanticTokens": true,
+            "staticcheck": true
           }
         }
       },

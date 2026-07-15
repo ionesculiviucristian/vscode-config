@@ -41,7 +41,7 @@
         "vscodevim.vim",
         "EditorConfig.EditorConfig",
         "mads-hartmann.bash-ide-vscode",
-        "tomoki1207.pdf"
+        "mathematic.vscode-pdf"
       ],
       "settings": {
         "[python]": {
@@ -51,11 +51,15 @@
           },
           "editor.defaultFormatter": "charliermarsh.ruff"
         },
-        "python-envs.terminal.autoActivationType": "off",
+        "ruff.configurationPreference": "filesystemFirst",
+        "ruff.lineLength": 120,
         "python.analysis.autoImportCompletions": true,
         "python.analysis.typeCheckingMode": "strict",
+        "python-envs.terminal.autoActivationType": "off",
         "python.terminal.activateEnvironment": false,
-        "ruff.lineLength": 120,
+        "[markdown]": {
+          "files.trimTrailingWhitespace": false
+        },
         "[shellscript]": {
           "editor.rulers": [
             80
@@ -65,6 +69,7 @@
         "chat.disableAIFeatures": true,
         "editor.codeActionsOnSave": {
           "source.addMissingImports": "explicit",
+          "source.fixAll.stylelint": "explicit",
           "source.fixAll.eslint": "explicit"
         },
         "editor.fontFamily": "'JetBrainsMonoNL Nerd Font Mono', 'monospace', monospace",
@@ -79,6 +84,8 @@
         "editor.unicodeHighlight.invisibleCharacters": true,
         "files.autoSave": "onFocusChange",
         "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true,
         "git.blame.editorDecoration.enabled": true,
         "git.blame.ignoreWhitespace": true,
         "git.blame.statusBarItem.enabled": true,
@@ -91,12 +98,41 @@
         "css.validate": false,
         "less.validate": false,
         "scss.validate": false,
+        "stylelint.validate": [
+          "css",
+          "postcss",
+          "scss",
+          "less",
+          "javascriptreact",
+          "typescriptreact"
+        ],
         "[xml]": {
           "editor.defaultFormatter": "redhat.vscode-xml"
         },
         "shellcheck.ignorePatterns": {
+          "**/*.csh": true,
+          "**/*.cshrc": true,
           "**/*.env.*": true,
-          "**/*.profile": true
+          "**/*.fish": true,
+          "**/*.login": true,
+          "**/*.logout": true,
+          "**/*.profile": true,
+          "**/*.tcsh": true,
+          "**/*.tcshrc": true,
+          "**/*.xonshrc": true,
+          "**/*.xsh": true,
+          "**/*.zlogin": true,
+          "**/*.zlogout": true,
+          "**/*.zprofile": true,
+          "**/*.zsh": true,
+          "**/*.zsh-theme": true,
+          "**/*.zshenv": true,
+          "**/*.zshrc": true,
+          "**/zlogin": true,
+          "**/zlogout": true,
+          "**/zprofile": true,
+          "**/zshenv": true,
+          "**/zshrc": true
         },
         "cSpell.diagnosticLevel": "Hint",
         "files.associations": {
@@ -106,31 +142,24 @@
           "editor.defaultFormatter": "tamasfe.even-better-toml"
         },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "prettier.requireConfig": true,
         "vscode-yaml-sort.forceQuotes": true,
         "vscode-yaml-sort.quotingType": "\"",
         "vscode-yaml-sort.sortArrays": true,
-        "errorLens.enabledDiagnosticLevels": [
-          "error",
-          "warning",
-          "info"
-        ],
         "js/ts.suggest.paths": false,
         "[yaml]": {
           "editor.defaultFormatter": "redhat.vscode-yaml"
         },
         "redhat.telemetry.enabled": false,
         "editor.semanticHighlighting.enabled": true,
-        "gopls": {
-          "ui.semanticTokens": true
-        },
         "terminal.integrated.minimumContrastRatio": 1,
         "window.titleBarStyle": "custom",
         "workbench.colorTheme": "Catppuccin Mocha",
         "workbench.iconTheme": "catppuccin-mocha",
         "[lua]": {
           "editor.defaultFormatter": "JohnnyMorganz.stylua"
-        }
+        },
+        "Lua.format.enable": false,
+        "bashIde.shellcheckPath": ""
       }
     }
   }

@@ -48,6 +48,9 @@ python manage_profiles.py --devcontainers
 
 ```json
 {
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
   "[shellscript]": {
     "editor.rulers": [
       80
@@ -69,6 +72,8 @@ python manage_profiles.py --devcontainers
   "editor.unicodeHighlight.invisibleCharacters": true,
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "git.blame.editorDecoration.enabled": true,
   "git.blame.ignoreWhitespace": true,
   "git.blame.statusBarItem.enabled": true,
@@ -88,7 +93,8 @@ python manage_profiles.py --devcontainers
 {
   "[shellscript]": {
     "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
-  }
+  },
+  "bashIde.shellcheckPath": ""
 }
 ```
 
@@ -101,9 +107,6 @@ python manage_profiles.py --devcontainers
 ```json
 {
   "editor.semanticHighlighting.enabled": true,
-  "gopls": {
-    "ui.semanticTokens": true
-  },
   "terminal.integrated.minimumContrastRatio": 1,
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Catppuccin Mocha"
@@ -142,16 +145,6 @@ python manage_profiles.py --devcontainers
 
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics
 
-```json
-{
-  "errorLens.enabledDiagnosticLevels": [
-    "error",
-    "warning",
-    "info"
-  ]
-}
-```
-
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): Integrates ESLint JavaScript into VS Code
 
 ```json
@@ -182,6 +175,12 @@ python manage_profiles.py --devcontainers
 
 - [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua): Lua Language Server coded by Lua
 
+```json
+{
+  "Lua.format.enable": false
+}
+```
+
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Markdown linting and style checking for Visual Studio Code
@@ -198,8 +197,7 @@ python manage_profiles.py --devcontainers
 
 ```json
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.requireConfig": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
 
@@ -212,8 +210,29 @@ python manage_profiles.py --devcontainers
 ```json
 {
   "shellcheck.ignorePatterns": {
+    "**/*.csh": true,
+    "**/*.cshrc": true,
     "**/*.env.*": true,
-    "**/*.profile": true
+    "**/*.fish": true,
+    "**/*.login": true,
+    "**/*.logout": true,
+    "**/*.profile": true,
+    "**/*.tcsh": true,
+    "**/*.tcshrc": true,
+    "**/*.xonshrc": true,
+    "**/*.xsh": true,
+    "**/*.zlogin": true,
+    "**/*.zlogout": true,
+    "**/*.zprofile": true,
+    "**/*.zsh": true,
+    "**/*.zsh-theme": true,
+    "**/*.zshenv": true,
+    "**/*.zshrc": true,
+    "**/zlogin": true,
+    "**/zlogout": true,
+    "**/zprofile": true,
+    "**/zshenv": true,
+    "**/zshrc": true
   }
 }
 ```
@@ -227,8 +246,19 @@ python manage_profiles.py --devcontainers
 ```json
 {
   "css.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  },
   "less.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "stylelint.validate": [
+    "css",
+    "postcss",
+    "scss",
+    "less",
+    "javascriptreact",
+    "typescriptreact"
+  ]
 }
 ```
 
@@ -246,7 +276,7 @@ python manage_profiles.py --devcontainers
 
 - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim): Vim emulation for Visual Studio Code
 
-- [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf): Display pdf files in VS Code
+- [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-pdf): Display pdf files in VS Code
 
 - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml): XML Language Support by Red Hat
 
@@ -296,17 +326,14 @@ python manage_profiles.py --devcontainers
 
 ```json
 {
+  "go.diagnostic.vulncheck": "Imports",
   "gopls": {
-    "formatting.gofumpt": true,
-    "ui.diagnostic.analyses": {
-      "nilness": true,
-      "shadow": true,
-      "unusedparams": true,
-      "unusedwrite": true,
-      "useany": true
+    "analyses": {
+      "shadow": true
     },
-    "ui.diagnostic.staticcheck": true,
-    "ui.diagnostic.vulncheck": "Imports"
+    "gofumpt": true,
+    "semanticTokens": true,
+    "staticcheck": true
   }
 }
 ```
@@ -368,6 +395,37 @@ python manage_profiles.py --devcontainers
 
 ### Python
 
+- [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml): Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates
+
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance): A performant, feature-rich language server for Python in VS Code
+
+```json
+{
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "strict"
+}
+```
+
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more
+
+```json
+{
+  "python.terminal.activateEnvironment": false
+}
+```
+
+- [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy): Python Debugger extension using debugpy
+
+- [Python Environments](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs): Provides a unified python environment experience
+
+```json
+{
+  "python-envs.terminal.autoActivationType": "off"
+}
+```
+
+- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff): A Visual Studio Code extension with support for the Ruff linter and formatter for Python
+
 ```json
 {
   "[python]": {
@@ -377,27 +435,7 @@ python manage_profiles.py --devcontainers
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "python-envs.terminal.autoActivationType": "off",
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.typeCheckingMode": "strict",
-  "python.terminal.activateEnvironment": false
-}
-```
-
-- [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml): Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates
-
-- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance): A performant, feature-rich language server for Python in VS Code
-
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more
-
-- [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy): Python Debugger extension using debugpy
-
-- [Python Environments](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs): Provides a unified python environment experience
-
-- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff): A Visual Studio Code extension with support for the Ruff linter and formatter for Python
-
-```json
-{
+  "ruff.configurationPreference": "filesystemFirst",
   "ruff.lineLength": 120
 }
 ```
@@ -430,10 +468,7 @@ python manage_profiles.py --devcontainers
     "editor.codeActionsOnSave": {
       "source.addMissingImports": "never"
     }
-  },
-  "extensions.autoUpdateExceptions": [
-    "Vue.volar"
-  ]
+  }
 }
 ```
 
