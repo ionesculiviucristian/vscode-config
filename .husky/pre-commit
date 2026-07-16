@@ -1,9 +1,9 @@
 # shellcheck disable=SC2148
 
 # Generate README.md file
-node "./scripts/generate-readme.js" && \
+node "./scripts/generate-readme.js" &&
   git add "README.md"
 
 # Generate devcontainer profiles
-python manage_profiles.py --devcontainers && \
-  git add devcontainers/
+python manage_profiles.py --devcontainers &&
+  git add "devcontainers/"
