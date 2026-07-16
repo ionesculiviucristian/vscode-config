@@ -41,11 +41,6 @@
         }
       },
       {
-        "description": "The maintained successor to Todo Tree for VS Code: same workflow, active fixes, better compatibility, and ongoing improvements.",
-        "id": "FanaticPythoner.better-todo-tree",
-        "name": "Better Todo Tree"
-      },
-      {
         "description": "XML Language Support by Red Hat",
         "id": "redhat.vscode-xml",
         "name": "XML",
